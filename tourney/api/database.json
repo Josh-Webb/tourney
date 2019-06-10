@@ -1,0 +1,56 @@
+{
+    "destination_addresses" : [
+       "New York, NY, USA",
+       "Nashville, TN, USA",
+       "Chicago, IL, USA",
+       "Orlando, FL, USA"
+    ],
+    "origin_addresses" : [ "Washington, DC, USA" ],
+    "rows" : [
+       {
+          "elements" : [
+             {
+                "distance" : {
+                   "text" : "226 mi",
+                   "value" : 363998
+                },
+                "duration" : {
+                   "text" : "3 hours 50 mins",
+                   "value" : 13827
+                }
+                
+             },
+             {
+                "distance" : {
+                   "text" : "666 mi",
+                   "value" : 1071087
+                },
+                "duration" : {
+                   "text" : "9 hours 59 mins",
+                   "value" : 35936
+                }
+             },
+             {
+                "distance" : {
+                   "text" : "699 mi",
+                   "value" : 1124566
+                },
+                "duration" : {
+                   "text" : "10 hours 49 mins",
+                   "value" : 38925
+                }
+             },
+             {
+                "distance" : {
+                   "text" : "852 mi",
+                   "value" : 1370838
+                },
+                "duration" : {
+                   "text" : "12 hours 15 mins",
+                   "value" : 44092
+                }
+             }
+          ]
+       }
+    ]
+ }

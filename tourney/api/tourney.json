@@ -1,0 +1,82 @@
+
+{
+"users": [
+    {
+    "id": 1,
+    "user_name": "Joshuackbar",
+    "email": "joshwebb42@gmail.com",
+    "password": "akuma4lyfe",
+    "address": "1901 Sever St, Nashville, TN",
+    "maxDistance": 6438,
+    "monday": true,
+    "tuesday": true,
+    "wednesday": false,
+    "thursday": false,
+    "friday": true,
+    "saturday": false,
+    "sunday": true,
+    "thumbnailId": 1
+    }
+],
+  
+"locations": [
+    {
+    "id": 1,
+    "address": "500 Interstate Blvd South, Nashville, TN",
+    "type": 2,
+    "monday": true,
+    "tuesday": true,
+    "wednesday": false,
+    "thursday": false,
+    "friday": true,
+    "saturday": false,
+    "sunday": true
+    }
+],
+  
+"games": [
+    {
+    "id":  1,
+    "gameName": "Street Fighter V",
+    "gameConsole": "PS4"
+    }
+],
+  
+"tourney": [
+    {
+    "id": 1,
+    "gameId": 1,
+    "winnersIds": [1],
+    "losersIds": [],
+    "locationId": 1,
+    "date": "2019-06-27"
+    }
+],
+  
+"gamePlayed": [
+    {
+    "id": 1,
+    "user_id": 1,
+    "game_id": 1
+    }
+],
+   
+"tips": [
+    {
+     "id": 1,
+     "content": "Hold down back to block."
+    },
+    {
+        "id": 2,
+        "content": "Do the A, A, A, and the Y, Y, Y."
+    }
+],
+
+"thumbnail": [
+    {
+        "id": 1,
+        "img": "tourney/src/akuma3rdstrikeportrait.png"
+    }
+]
+}
+  
