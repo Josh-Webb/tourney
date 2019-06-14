@@ -16,7 +16,39 @@
     "saturday": false,
     "sunday": true,
     "thumbnailId": 1
-    }
+    },
+    {
+        "id": 2,
+        "user_name": "PyroClasticMan",
+        "email": "email@gmail.com",
+        "password": "password",
+        "address": "912 S 14th St, Nashville, TN",
+        "maxDistance": 12846,
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": true,
+        "thumbnailId": 2
+        },
+        {
+            "id": 3,
+            "user_name": "Woolie",
+            "email": "email@gmail.com",
+            "password": "password",
+            "address": "2190 Memorial Drive, Clarksville, TN",
+            "maxDistance": 40233,
+            "monday": false,
+            "tuesday": true,
+            "wednesday": false,
+            "thursday": false,
+            "friday": false,
+            "saturday": true,
+            "sunday": true,
+            "thumbnailId": 3
+            }
 ],
   
 "locations": [
