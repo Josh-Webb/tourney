@@ -1,0 +1,1 @@
+// Full register.  Games/address/distance/daybooleans
