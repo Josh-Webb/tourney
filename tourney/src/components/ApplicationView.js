@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import Header from './header/header'
 import Login from './login/loginCard'
 import RegisterOne from './login/registerOne'
+import RegisterTwo from './login/registerTwo'
 
 
 
@@ -32,6 +33,15 @@ class ApplicationView extends Component {
                          users={this.state.users}
                          addUser={this.addUser}
                          />
+                    );
+                }}
+                />
+                <Route exact path="/finish"
+                render={props => {
+                    return (
+                        <RegisterTwo
+                        {...props}
+                        />
                     );
                 }}
                 />
