@@ -2,35 +2,35 @@ const remoteURL = "http://localhost:5001"
 
 export default {
   get(id) {
-    return fetch(`${remoteURL}/tips/${id}`).then(e => e.json())
+    return fetch(`${remoteURL}/connections/${id}`).then(e => e.json())
   },
   getAll() {
-    return fetch(`${remoteURL}/tips`).then(e => e.json())
+    return fetch(`${remoteURL}/connections`).then(e => e.json())
   },
-  deleteTip(id) {
-    return fetch(`${remoteURL}/tips/${id}`, {
+  deleteEvent(id) {
+    return fetch(`${remoteURL}/connections/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
       },
     }).then(e => e.json())
   },
-  post(tip) {
-    return fetch(`${remoteURL}/tips`, {
+  post(connection) {
+    return fetch(`${remoteURL}/connections`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(tip)
+      body: JSON.stringify(connection)
     }).then(e => e.json())
   },
-  put(editedTip) {
-    return fetch(`${remoteURL}/locations/${editedTip.id}`, {
+  put(editedConnection) {
+    return fetch(`${remoteURL}/connections/${editedConnection.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(editedTip)
+      body: JSON.stringify(editedConnection)
     }).then(data => data.json());
   }
 }
