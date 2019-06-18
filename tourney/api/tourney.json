@@ -52,6 +52,21 @@
       "id": 1,
       "gameName": "Street Fighter V",
       "gameConsole": "PS4"
+    },
+    {
+      "id": 2,
+      "gameName": "Ultimate Marvel vs Capcom 3",
+      "gameConsole": "PS4"
+    },
+    {
+      "id": 3,
+      "gameName": "Super Smash Bros. Ultimate",
+      "gameConsole": "Switch"
+    },
+    {
+      "id": 4,
+      "gameName": "TMNT Tournament Fighters",
+      "gameConsole": "Super Nintendo"
     }
   ],
   "tourneys": [

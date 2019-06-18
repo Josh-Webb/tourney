@@ -3,9 +3,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import UserManager from '../../modules/UserManager';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Media, Button, Form, FormGroup, Label, Input, FormText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
+import LibraryManager from '../../modules/LibraryManager'
+
+
+
 
 export default class RegisterTwo extends Component {
+
+    
 
     // Set initial state
     state = {
@@ -20,8 +27,24 @@ export default class RegisterTwo extends Component {
         saturday: '',
         sunday: '',
         thumbnailId: '',
-        currentUser: {}
+        currentUser: {},
+        gameArray: { label: '', value: ''}
     };
+
+    constructor(props) {
+        super(props);
+    
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+          dropdownOpen: false
+        };
+      }
+    
+      toggle() {
+        this.setState({
+          dropdownOpen: !this.state.dropdownOpen
+        });
+      }
 
     handleFieldChange = evt => {
         const stateToChange = {}
@@ -54,6 +77,9 @@ export default class RegisterTwo extends Component {
 
         UserManager.put(registerFull).then(() => this.props.history.push('/'));
     };
+
+
+
     componentDidMount() {
         UserManager.get(this.props.match.params.userId).then(user => {
             this.setState({
@@ -72,6 +98,20 @@ export default class RegisterTwo extends Component {
                 thumbnailId: user.thumbnailId
             })
         })
+
+        
+        LibraryManager.getAll()
+        .then(games => 
+            {
+                this.setState({
+                    gameArray:{ 
+                    label: games.gameName,
+                    value: games.id
+                    }})
+            console.log(games, 'games')
+            console.log(this.state.gameArray.gameName)
+        });
+        
     }
 
                 render() {
@@ -79,23 +119,24 @@ export default class RegisterTwo extends Component {
                       <React.Fragment>
                     <Form>
                       <FormGroup>
-                        <Label for="exampleEmail">Email</Label>
-                        <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                        <Label for="address">Address</Label>
+                        <Input type="address" name="address" id="address" value={this.state.address} />
                       </FormGroup>
                       <FormGroup>
-                        <Label for="examplePassword">Password</Label>
-                        <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+                        <Label for="maxDistance">Max Distance</Label>
+                        <Input type="maxDistance" name="maxDistance" id="maxDistance" value={this.state.maxDistance} />
                       </FormGroup>
-                      <FormGroup>
-                        <Label for="exampleSelectMulti">Select Multiple</Label>
-                        <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
+                      <ReactMultiSelectCheckboxes options = { this.props.gameArray } />
+                      
+                      {/* <FormGroup>
+                        <Label for="exampleSelect">Pick a Thumbnail</Label>
+                        <Media left href="#">
+                        <Media object data-src="holder.js/64x64" alt="Generic placeholder image" />
+                         </Media>
+                        <Input type="select" name="select" id="exampleSelect">
                         </Input>
-                      </FormGroup>
+                        </FormGroup> */}
+                    
                       <FormGroup check>
                         <Label check>
                           <Input type="checkbox" />{' '}
@@ -150,3 +191,4 @@ export default class RegisterTwo extends Component {
                   );
                 }
               }
+            
