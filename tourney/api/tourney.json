@@ -45,6 +45,17 @@
       "friday": true,
       "saturday": false,
       "sunday": true
+    },
+    {
+      "address": "500 Interstate",
+      "monday": "",
+      "tuesday": "",
+      "wednesday": "",
+      "thursday": "",
+      "friday": "",
+      "saturday": "",
+      "sunday": "",
+      "id": 2
     }
   ],
   "games": [
@@ -59,25 +70,37 @@
       "gameConsole": "PS4"
     },
     {
-      "id": 3,
-      "gameName": "Super Smash Bros. Ultimate",
-      "gameConsole": "Switch"
-    },
-    {
       "id": 4,
       "gameName": "TMNT Tournament Fighters",
       "gameConsole": "Super Nintendo"
+    },
+    {
+      "gameName": "Mortal Kombat XI",
+      "gameConsole": "PS4",
+      "id": 5
     }
   ],
   "tourneys": [
     {
       "id": 1,
-      "gameId": 1,
+      "game": "Street Fighter V",
+      "name": "SmashVille",
       "winnersIds": [
         1
       ],
       "losersIds": [],
-      "locationId": 1,
+      "locationAddress": "500 Interstate Blvd South, Nashville, TN",
+      "date": "2019-06-27"
+    },
+    {
+      "id": 2,
+      "game": "Street Fighter V",
+      "name": "SmashVille",
+      "winnersIds": [
+        1
+      ],
+      "losersIds": [],
+      "locationAddress": "500 Interstate Blvd South, Nashville, TN",
       "date": "2019-06-27"
     }
   ],

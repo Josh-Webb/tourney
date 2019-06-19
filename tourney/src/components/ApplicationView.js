@@ -6,6 +6,9 @@ import Header from './header/header'
 import Login from './login/loginCard'
 import RegisterOne from './login/registerOne'
 import RegisterTwo from './login/registerTwo'
+import TourneyList from './tourneyPage/tourneyList';
+import LibraryList from './library/libraryList'
+import LocationForm from './locations/locationForm'
 
 
 
@@ -41,6 +44,39 @@ class ApplicationView extends Component {
                     return (
                         <RegisterTwo
                         {...props}
+                        />
+                    );
+                }}
+                />
+                <Route exact path="/tourney"
+                render={props => {
+                    return (
+                        <TourneyList
+                        {...props}
+                        />
+                    );
+                }}
+                />
+                <Route
+            exact
+            path="/locations"
+            render={props => {
+              return (
+                <LocationForm
+                  {...props}
+                  locations={this.state.locations}
+                  addEvent={this.addLocation}
+                />
+              );
+            }}
+          />
+                <Route exact path="/library"
+                render={props => {
+                    return (
+                        <LibraryList
+                        {...props}
+                        library={this.state.library}
+                        addGame={this.addGame}
                         />
                     );
                 }}

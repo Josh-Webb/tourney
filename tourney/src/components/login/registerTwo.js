@@ -6,6 +6,7 @@ import UserManager from '../../modules/UserManager';
 import { Media, Button, Form, FormGroup, Label, Input, FormText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
 import LibraryManager from '../../modules/LibraryManager'
+import LibraryOption from '../library/libraryOptions'
 
 
 
@@ -27,8 +28,8 @@ export default class RegisterTwo extends Component {
         saturday: '',
         sunday: '',
         thumbnailId: '',
-        currentUser: {},
-        gameArray: { label: '', value: ''}
+        gameArray: [],
+        currentUser: {}
     };
 
     constructor(props) {
@@ -100,17 +101,11 @@ export default class RegisterTwo extends Component {
         })
 
         
-        LibraryManager.getAll()
-        .then(games => 
-            {
-                this.setState({
-                    gameArray:{ 
-                    label: games.gameName,
-                    value: games.id
-                    }})
-            console.log(games, 'games')
-            console.log(this.state.gameArray.gameName)
-        });
+        LibraryManager.getAll().then(games => {
+            this.setState({
+                gameArray: games.gameName
+            })
+        })
         
     }
 
@@ -126,7 +121,9 @@ export default class RegisterTwo extends Component {
                         <Label for="maxDistance">Max Distance</Label>
                         <Input type="maxDistance" name="maxDistance" id="maxDistance" value={this.state.maxDistance} />
                       </FormGroup>
-                      <ReactMultiSelectCheckboxes options = { this.props.gameArray } />
+                      {/* <ReactMultiSelectCheckboxes options = { this.props.gameArray } /> */}
+
+
                       
                       {/* <FormGroup>
                         <Label for="exampleSelect">Pick a Thumbnail</Label>

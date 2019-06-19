@@ -16,7 +16,7 @@ export default {
     }).then(e => e.json())
   },
   post(game) {
-    return fetch(`${remoteURL}/locations`, {
+    return fetch(`${remoteURL}/games`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export default {
     }).then(e => e.json())
   },
   put(editedGame) {
-    return fetch(`${remoteURL}/locations/${editedGame.id}`, {
+    return fetch(`${remoteURL}/games/${editedGame.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
