@@ -56,6 +56,82 @@
       "saturday": "",
       "sunday": "",
       "id": 2
+    },
+    {
+      "address": "doot doot",
+      "monday": "on",
+      "tuesday": "",
+      "wednesday": "",
+      "thursday": "",
+      "friday": "",
+      "saturday": "",
+      "sunday": "",
+      "id": 3
+    },
+    {
+      "address": "dat dat",
+      "monday": "",
+      "tuesday": "",
+      "wednesday": "",
+      "thursday": "",
+      "friday": "",
+      "saturday": "",
+      "sunday": "",
+      "id": 4
+    },
+    {
+      "address": "Toggle",
+      "monday": "on",
+      "tuesday": "",
+      "wednesday": "",
+      "thursday": "",
+      "friday": "",
+      "saturday": "",
+      "sunday": "",
+      "id": 5
+    },
+    {
+      "address": ":D",
+      "id": 6
+    },
+    {
+      "address": ":D",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": true,
+        "sunday": false
+      },
+      "id": 7
+    },
+    {
+      "address": "Monday, Wednesday, Saturday, Sunday",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": true,
+        "sunday": true
+      },
+      "id": 8
+    },
+    {
+      "address": "Toogle Toggle",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": false,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 9
     }
   ],
   "games": [
