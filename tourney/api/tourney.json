@@ -2,19 +2,17 @@
   "users": [
     {
       "id": 1,
-      "user_name": "Joshuackbar",
-      "email": "joshwebb42@gmail.com",
-      "password": "akuma4lyfe",
-      "address": "1901 Sevier St, Nashville, TN",
-      "maxDistance": 6438,
-      "monday": true,
-      "tuesday": true,
-      "wednesday": false,
-      "thursday": false,
-      "friday": true,
-      "saturday": false,
-      "sunday": true,
-      "thumbnailId": 1
+      "address": "408 West College St, Greenbrier, TN",
+      "maxDistance": "10",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      }
     },
     {
       "user_name": "QueefMuffin",
@@ -36,8 +34,8 @@
       "user_name": "joe",
       "email": "joe@internet.com",
       "password": "password",
-      "address": "",
-      "maxDistance": "",
+      "address": "408 West College St, Greenbrier, TN",
+      "maxDistance": "10",
       "monday": false,
       "tuesday": false,
       "wednesday": false,
@@ -46,7 +44,78 @@
       "saturday": false,
       "sunday": false,
       "thumbnailId": 0.7664786729734343,
-      "id": 3
+      "id": 3,
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": true,
+        "friday": false,
+        "saturday": false,
+        "sunday": true
+      }
+    },
+    {
+      "id": 4,
+      "address": "408 West College St, Greenbrier, TN",
+      "maxDistance": "7",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Gougi",
+      "email": "email@email.com",
+      "password": "password",
+      "address": "1908 Sevier St, Nashville, TN",
+      "maxDistance": "20",
+      "monday": false,
+      "tuesday": false,
+      "wednesday": false,
+      "thursday": false,
+      "friday": false,
+      "saturday": false,
+      "sunday": false,
+      "thumbnailId": 0.2082817131946071,
+      "id": 5,
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Akuma",
+      "email": "email@",
+      "password": "",
+      "id": 6
+    },
+    {
+      "user_name": "doot",
+      "email": "dat@dat.com",
+      "password": "password",
+      "id": 7,
+      "address": "Why?",
+      "maxDistance": "God why?",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": false,
+        "sunday": false
+      }
     }
   ],
   "locations": [

@@ -39,17 +39,7 @@ export default class RegisterOne extends Component {
         const user = {
             user_name: this.state.user_name,
             email: this.state.email,
-            password: this.state.password,
-            address: '',
-            maxDistance: '',
-            monday: false,
-            tuesday: false,
-            wednesday: false,
-            thursday: false,
-            friday: false,
-            saturday: false,
-            sunday: false,
-            thumbnailId: Math.random(1, 26)
+            password: this.state.password
 
         };
         console.log("user", user)
