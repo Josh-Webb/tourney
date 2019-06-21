@@ -1,40 +1,33 @@
-//header with user thumnail on far right.
 import React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
+import '../../modules/UpdateProfileButton'
+import {withRouter} from 'react-router-dom'
+import collectSessStorage from '../../modules/UpdateProfileButton';
 
-export default class Example extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggleNavbar = this.toggleNavbar.bind(this);
-    this.state = {
-      collapsed: true
-    };
-  }
-
-  toggleNavbar() {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  }
+class Header extends React.Component {
   render() {
     return (
-      <div>
-        <Navbar color="faded" light>
-          <NavbarBrand href="/" className="mr-auto">reactstrap</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-          <Collapse isOpen={!this.state.collapsed} navbar>
-            <Nav navbar>
-              <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
-    );
+      <Container style={headerStyle}>
+        <Row>
+          <Col>Tourney</Col>
+          <button
+          type="button"
+          className="btn btn-success"
+          onClick={() => {
+            this.props.history.push(`/user/${collectSessStorage()}/edit`)
+          }}>Update Preferences</button>
+        </Row>
+        </Container >
+    )
   }
 }
+
+const headerStyle = {
+  background: 'rgb(140, 100, 70)',
+  color: '#092691',
+  padding: '30px',
+  fontFamily: 'helvetica',
+  marginBottom: '30px'
+}
+
+export default withRouter (Header)

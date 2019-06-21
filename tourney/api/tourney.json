@@ -2,19 +2,17 @@
   "users": [
     {
       "id": 1,
-      "user_name": "Joshuackbar",
-      "email": "joshwebb42@gmail.com",
-      "password": "akuma4lyfe",
-      "address": "1901 Sever St, Nashville, TN",
-      "maxDistance": 6438,
-      "monday": true,
-      "tuesday": true,
-      "wednesday": false,
-      "thursday": false,
-      "friday": true,
-      "saturday": false,
-      "sunday": true,
-      "thumbnailId": 1
+      "address": "408 West College St, Greenbrier, TN",
+      "maxDistance": "10",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      }
     },
     {
       "user_name": "QueefMuffin",
@@ -31,20 +29,173 @@
       "sunday": false,
       "thumbnailId": 0.1871404760690194,
       "id": 2
+    },
+    {
+      "user_name": "joe",
+      "email": "joe@internet.com",
+      "password": "password",
+      "address": "408 West College St, Greenbrier, TN",
+      "maxDistance": "10",
+      "monday": false,
+      "tuesday": false,
+      "wednesday": false,
+      "thursday": false,
+      "friday": false,
+      "saturday": false,
+      "sunday": false,
+      "thumbnailId": 0.7664786729734343,
+      "id": 3,
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": true,
+        "friday": false,
+        "saturday": false,
+        "sunday": true
+      }
+    },
+    {
+      "id": 4,
+      "address": "408 West College St, Greenbrier, TN",
+      "maxDistance": "7",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Gougi",
+      "email": "email@email.com",
+      "password": "password",
+      "address": "1908 Sevier St, Nashville, TN",
+      "maxDistance": "20",
+      "monday": false,
+      "tuesday": false,
+      "wednesday": false,
+      "thursday": false,
+      "friday": false,
+      "saturday": false,
+      "sunday": false,
+      "thumbnailId": 0.2082817131946071,
+      "id": 5,
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Akuma",
+      "email": "email@",
+      "password": "",
+      "id": 6
+    },
+    {
+      "user_name": "doot",
+      "email": "dat@dat.com",
+      "password": "password",
+      "id": 7,
+      "address": "Why?",
+      "maxDistance": "God why?",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": false,
+        "sunday": false
+      }
     }
   ],
   "locations": [
     {
-      "id": 1,
-      "address": "500 Interstate Blvd South, Nashville, TN",
-      "type": 2,
-      "monday": true,
-      "tuesday": true,
-      "wednesday": false,
-      "thursday": false,
-      "friday": true,
-      "saturday": false,
-      "sunday": true
+      "address": "500 Interstate Blv South, Nashville, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 1
+    },
+    {
+      "address": "Monday, Wednesday, Saturday, Sunday",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": true,
+        "sunday": true
+      },
+      "id": 2
+    },
+    {
+      "address": "1901 Sevier St, Nashville, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 3
+    },
+    {
+      "address": "Toogle Toggle",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 4
+    },
+    {
+      "address": "Old Town Road",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": false,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 5
+    },
+    {
+      "address": "ds;lfkajsd;lfj",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": false,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 6
     }
   ],
   "games": [
@@ -52,17 +203,34 @@
       "id": 1,
       "gameName": "Street Fighter V",
       "gameConsole": "PS4"
+    },
+    {
+      "id": 2,
+      "gameName": "Ultimate Marvel vs Capcom 3",
+      "gameConsole": "PS4"
     }
   ],
   "tourneys": [
     {
       "id": 1,
-      "gameId": 1,
+      "game": "Street Fighter V",
+      "name": "SmashVille",
       "winnersIds": [
         1
       ],
       "losersIds": [],
-      "locationId": 1,
+      "locationAddress": "500 Interstate Blvd South, Nashville, TN",
+      "date": "2019-06-27"
+    },
+    {
+      "id": 2,
+      "game": "Street Fighter V",
+      "name": "SmashVille",
+      "winnersIds": [
+        1
+      ],
+      "losersIds": [],
+      "locationAddress": "500 Interstate Blvd South, Nashville, TN",
       "date": "2019-06-27"
     }
   ],
