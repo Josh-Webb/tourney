@@ -6,6 +6,7 @@ import Header from './components/header/header'
 import Footer from './components/footer/footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ApplicationView from './components/ApplicationView';
+import NavBar from './components/nav/navBar'
 
 ReactDOM.render(
 <Router>

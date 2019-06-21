@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import LocationsManager from '../../modules/LocationsManager';
 import { Media, Button, Form, FormGroup, Label, Input, FormText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import './locations.css';
-import Checkbox from "./locationCheckbox";
+import Checkbox from "../../modules/Checkboxes";
 
 const OPTIONS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
 
-export default class EventForm extends Component {
+export default class LocationForm extends Component {
   // Set initial state
   state = {
     address: '',
@@ -100,6 +100,7 @@ export default class EventForm extends Component {
     };
 
     this.addLocation(location).then(() => this.props.history.push('/'));
+    console.log(sessionStorage.getItem('credentials'))
   };
 
   render() {

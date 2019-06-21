@@ -5,7 +5,7 @@
       "user_name": "Joshuackbar",
       "email": "joshwebb42@gmail.com",
       "password": "akuma4lyfe",
-      "address": "1901 Sever St, Nashville, TN",
+      "address": "1901 Sevier St, Nashville, TN",
       "maxDistance": 6438,
       "monday": true,
       "tuesday": true,
@@ -31,81 +31,37 @@
       "sunday": false,
       "thumbnailId": 0.1871404760690194,
       "id": 2
+    },
+    {
+      "user_name": "joe",
+      "email": "joe@internet.com",
+      "password": "password",
+      "address": "",
+      "maxDistance": "",
+      "monday": false,
+      "tuesday": false,
+      "wednesday": false,
+      "thursday": false,
+      "friday": false,
+      "saturday": false,
+      "sunday": false,
+      "thumbnailId": 0.7664786729734343,
+      "id": 3
     }
   ],
   "locations": [
     {
-      "id": 1,
-      "address": "500 Interstate Blvd South, Nashville, TN",
-      "type": 2,
-      "monday": true,
-      "tuesday": true,
-      "wednesday": false,
-      "thursday": false,
-      "friday": true,
-      "saturday": false,
-      "sunday": true
-    },
-    {
-      "address": "500 Interstate",
-      "monday": "",
-      "tuesday": "",
-      "wednesday": "",
-      "thursday": "",
-      "friday": "",
-      "saturday": "",
-      "sunday": "",
-      "id": 2
-    },
-    {
-      "address": "doot doot",
-      "monday": "on",
-      "tuesday": "",
-      "wednesday": "",
-      "thursday": "",
-      "friday": "",
-      "saturday": "",
-      "sunday": "",
-      "id": 3
-    },
-    {
-      "address": "dat dat",
-      "monday": "",
-      "tuesday": "",
-      "wednesday": "",
-      "thursday": "",
-      "friday": "",
-      "saturday": "",
-      "sunday": "",
-      "id": 4
-    },
-    {
-      "address": "Toggle",
-      "monday": "on",
-      "tuesday": "",
-      "wednesday": "",
-      "thursday": "",
-      "friday": "",
-      "saturday": "",
-      "sunday": "",
-      "id": 5
-    },
-    {
-      "address": ":D",
-      "id": 6
-    },
-    {
-      "address": ":D",
+      "address": "500 Interstate Blv South, Nashville, TN",
       "checkboxes": {
         "monday": true,
-        "tuesday": true,
+        "tuesday": false,
         "wednesday": true,
         "thursday": false,
-        "friday": false,
-        "saturday": true,
+        "friday": true,
+        "saturday": false,
         "sunday": false
       },
-      "id": 7
+      "id": 1
     },
     {
       "address": "Monday, Wednesday, Saturday, Sunday",
@@ -118,12 +74,38 @@
         "saturday": true,
         "sunday": true
       },
-      "id": 8
+      "id": 2
+    },
+    {
+      "address": "1901 Sevier St, Nashville, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 3
     },
     {
       "address": "Toogle Toggle",
       "checkboxes": {
-        "monday": false,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 4
+    },
+    {
+      "address": "Old Town Road",
+      "checkboxes": {
+        "monday": true,
         "tuesday": false,
         "wednesday": false,
         "thursday": false,
@@ -131,7 +113,20 @@
         "saturday": false,
         "sunday": false
       },
-      "id": 9
+      "id": 5
+    },
+    {
+      "address": "ds;lfkajsd;lfj",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": false,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 6
     }
   ],
   "games": [
@@ -144,16 +139,6 @@
       "id": 2,
       "gameName": "Ultimate Marvel vs Capcom 3",
       "gameConsole": "PS4"
-    },
-    {
-      "id": 4,
-      "gameName": "TMNT Tournament Fighters",
-      "gameConsole": "Super Nintendo"
-    },
-    {
-      "gameName": "Mortal Kombat XI",
-      "gameConsole": "PS4",
-      "id": 5
     }
   ],
   "tourneys": [

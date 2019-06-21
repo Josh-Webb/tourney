@@ -3,189 +3,358 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import UserManager from '../../modules/UserManager';
-import { Media, Button, Form, FormGroup, Label, Input, FormText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
 import LibraryManager from '../../modules/LibraryManager'
-import LibraryOption from '../library/libraryOptions'
+import Checkbox from "../../modules/Checkboxes"
 
 
-
+const OPTIONS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
 
 export default class RegisterTwo extends Component {
+  // Set initial state
+  state = {
+    address: '',
+    maxDistance: '',
+    checkboxes: OPTIONS.reduce(
+        (options, option) => ({
+            ...options,
+            [option]: false
+        }),
+        {}
+    )
+  };
 
-    
+  selectAllCheckboxes = isSelected => {
+    Object.keys(this.state.checkboxes).forEach(checkbox => {
+      // BONUS: Can you explain why we pass updater function to setState instead of an object?
+      this.setState(prevState => ({
+        checkboxes: {
+          ...prevState.checkboxes,
+          [checkbox]: isSelected
+        }
+      }));
+    });
+  };
 
-    // Set initial state
-    state = {
-        user_name: '',
-        address: '',
-        maxDistance: '',
-        monday: '',
-        tuesday: '',
-        wednesday: '',
-        thursday: '',
-        friday: '',
-        saturday: '',
-        sunday: '',
-        thumbnailId: '',
-        gameArray: [],
-        currentUser: {}
-    };
+  selectAll = () => this.selectAllCheckboxes(true);
 
-    constructor(props) {
-        super(props);
-    
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-          dropdownOpen: false
-        };
+  deselectAll = () => this.selectAllCheckboxes(false);
+
+  handleCheckboxChange = changeEvent => {
+    const { name } = changeEvent.target;
+
+    this.setState(prevState => ({
+      checkboxes: {
+        ...prevState.checkboxes,
+        [name]: !prevState.checkboxes[name]
       }
-    
-      toggle() {
+    }));
+  };
+
+  handleFormSubmit = formSubmitEvent => {
+    formSubmitEvent.preventDefault();
+
+    Object.keys(this.state.checkboxes)
+      .filter(checkbox => this.state.checkboxes[checkbox])
+      .forEach(checkbox => {
+        console.log(checkbox, "is selected.");
+      });
+  };
+
+  createCheckbox = option => (
+    <Checkbox
+      label={option}
+      isSelected={this.state.checkboxes[option]}
+      onCheckboxChange={this.handleCheckboxChange}
+      key={option}
+    />
+  );
+
+  createCheckboxes = () => OPTIONS.map(this.createCheckbox);
+
+
+  updateUser = user =>
+    UserManager.put(user)
+      .then(() => UserManager.getAll('users'))
+      .then(users =>
         this.setState({
-          dropdownOpen: !this.state.dropdownOpen
-        });
-      }
+          users: users
+        })
+      )
+      .then(() => this.props.history.push('users'));
 
-    handleFieldChange = evt => {
-        const stateToChange = {}
-        stateToChange[evt.target.id] = evt.target.value
-        this.setState(stateToChange);
-        console.log(stateToChange)
-    }
+  // Update state whenever an input field is edited
+  handleFieldChange = evt => {
+    const stateToChange = {};
+    stateToChange[evt.target.id] = evt.target.value;
+
+    this.setState(stateToChange)
+    console.log(stateToChange);
+  };
+
+
+
+  saveNewUpdate = evt => {
+    evt.preventDefault();
     
-    registerTwo = evt => {
-        evt.preventDefault();
 
-        const registerFull = {
-            id: this.props.match.params.userId,
-            user_name: this.state.user_name,
-            email: this.state.email,
-            password: this.state.password,
-            address: this.state.address,
-            maxDistance: this.state.maxDistance,
-            monday: this.state.monday,
-            tuesday: this.state.tuesday,
-            wednesday: this.state.wednesday,
-            thursday: this.state.thursday,
-            friday: this.state.friday,
-            saturday: this.state.saturday,
-            sunday: this.state.sunday,
-            thumbnailId: this.state.thumbnailId
-
-        };
-        console.log("user", registerFull)
-
-        UserManager.put(registerFull).then(() => this.props.history.push('/'));
+    const users = {
+      id: this.props.match.params.userId,
+      address: this.state.address,
+      maxDistance: this.state.maxDistance,
+      checkboxes: this.state.checkboxes
     };
 
+    this.updateUser(users).then(() => this.props.history.push('/'));
+  };
+
+  render() {
+    return (
+      <React.Fragment>
+          <div className="form-group">
+                        <label htmlFor="address">Address</label>
+                        <input type="text"
+                        required
+                        className="form-control"
+                        onChange={this.handleFieldChange}
+                        id="address"
+                        placeholder="Address"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="maxDistance">maxDistance</label>
+                        <input type="text"
+                        required
+                        className="form-control"
+                        onChange={this.handleFieldChange}
+                        id="maxDistance"
+                        placeholder="In miles"
+                        />
+                    </div>
 
 
-    componentDidMount() {
-        UserManager.get(this.props.match.params.userId).then(user => {
-            this.setState({
-                user_name: user.user_name,
-                email: user.email,
-                password: user.password,
-                address: user.address,
-                maxDistance: user.maxDistance,
-                monday: user.monday,
-                tuesday: user.tuesday,
-                wednesay: user.wednesday,
-                thurdsay: user.thurdsay,
-                friday: user.friday,
-                saturday: user.saturday,
-                sunday: user.sunday,
-                thumbnailId: user.thumbnailId
-            })
-        })
+        <div className="container">
+        <div className="row mt-5">
+          <div className="col-sm-12">
+            <form onSubmit={this.handleFormSubmit}>
+              {this.createCheckboxes()}
 
+              <div className="form-group mt-2">
+                <button
+                  type="button"
+                  className="btn btn-outline-primary mr-2"
+                  onClick={this.selectAll}
+                >
+                  Select All
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-primary mr-2"
+                  onClick={this.deselectAll}
+                >
+                  Deselect All
+                </button>
+                <button type="submit" className="btn btn-primary"
+                onClick={this.saveNewUpdate}>
+                  Save
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </React.Fragment>
+    );
+  }
+}
+
+// const OPTIONS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+
+
+
+// export default class RegisterTwo extends Component {
+
+    
+
+//     // Set initial state
+//     state = {
+//         address: '',
+//         maxDistance: '',
+//         checkboxes: OPTIONS.reduce(
+//             (options, option) => ({
+//                 ...options,
+//                 [option]: false
+//             }),
+//             {}
+//         ),
+//         thumbnailId: '',
+//         gameArray: [],
+//         currentUser: {}
+//     };
+
+//     constructor(props) {
+//         super(props);
+    
+//         this.toggle = this.toggle.bind(this);
+//         this.state = {
+//           dropdownOpen: false
+//         };
+//       }
+    
+//       toggle() {
+//         this.setState({
+//           dropdownOpen: !this.state.dropdownOpen
+//         });
+//       }
+
+//     handleFieldChange = evt => {
+//         const stateToChange = {}
+//         stateToChange[evt.target.id] = evt.target.value
+//         this.setState(stateToChange);
+//         console.log(stateToChange)
+//     }
+
+//     handleFormSubmit = formSubmitEvent => {
+//         formSubmitEvent.preventDefault();
+    
+//         Object.keys(this.state.checkboxes)
+//           .filter(checkbox => this.state.checkboxes[checkbox])
+//           .forEach(checkbox => {
+//             console.log(checkbox, "is selected.");
+//           });
+//       };
+    
+//       createCheckbox = option => (
+//         <Checkbox
+//           label={option}
+//           isSelected={this.state.checkboxes[option]}
+//           onCheckboxChange={this.handleCheckboxChange}
+//           key={option}
+//         />
+//       );
+    
+//       createCheckboxes = () => OPTIONS.map(this.createCheckbox);
+
+//       selectAllCheckboxes = isSelected => {
+//         Object.keys(this.state.checkboxes).forEach(checkbox => {
+//           // BONUS: Can you explain why we pass updater function to setState instead of an object?
+//           this.setState(prevState => ({
+//             checkboxes: {
+//               ...prevState.checkboxes,
+//               [checkbox]: isSelected
+//             }
+//           }));
+//         });
+//       };
+    
+//       selectAll = () => this.selectAllCheckboxes(true);
+    
+//       deselectAll = () => this.selectAllCheckboxes(false);
+    
+//       handleCheckboxChange = changeEvent => {
+//         const { name } = changeEvent.target;
+    
+//         this.setState(prevState => ({
+//           checkboxes: {
+//             ...prevState.checkboxes,
+//             [name]: !prevState.checkboxes[name]
+//           }
+//         }));
+//       };
+    
+    
+//     registerTwo = evt => {
+//         evt.preventDefault();
+
+//         const registerFull = {
+//             id: this.props.match.params.userId,
+//             address: this.state.address,
+//             maxDistance: this.state.maxDistance,
+//             checkboxes: this.state.checkboxes
+
+//         };
+//         console.log("user", registerFull)
+
+//         UserManager.patch(registerFull).then(() => this.props.history.push('/'));
+//     };
+
+
+
+//     componentDidMount() {
+//         UserManager.get(this.props.match.params.userId).then(user => {
+//             this.setState({
+//                 address: this.state.address,
+//                 maxDistance: this.state.maxDistance,
+//                 checkboxes: this.state.checkboxes,
+//             })
+//         })
         
-        LibraryManager.getAll().then(games => {
-            this.setState({
-                gameArray: games.gameName
-            })
-        })
-        
-    }
+//     }
 
-                render() {
-                  return (
-                      <React.Fragment>
-                    <Form>
-                      <FormGroup>
-                        <Label for="address">Address</Label>
-                        <Input type="address" name="address" id="address" value={this.state.address} />
-                      </FormGroup>
-                      <FormGroup>
-                        <Label for="maxDistance">Max Distance</Label>
-                        <Input type="maxDistance" name="maxDistance" id="maxDistance" value={this.state.maxDistance} />
-                      </FormGroup>
-                      {/* <ReactMultiSelectCheckboxes options = { this.props.gameArray } /> */}
+//                 render() {
+//                   return (
+//                       <React.Fragment>
+//                     <Form>
+//                       <FormGroup>
+//                         <Label for="address">Address</Label>
+//                         <Input type="address" name="address" id="address" value={this.state.address} />
+//                       </FormGroup>
+//                       <FormGroup>
+//                         <Label for="maxDistance">Max Distance</Label>
+//                         <Input type="maxDistance" name="maxDistance" id="maxDistance" value={this.state.maxDistance} />
+//                       </FormGroup>
+//                       {/* <ReactMultiSelectCheckboxes options = { this.props.gameArray } /> */}
 
 
                       
-                      {/* <FormGroup>
-                        <Label for="exampleSelect">Pick a Thumbnail</Label>
-                        <Media left href="#">
-                        <Media object data-src="holder.js/64x64" alt="Generic placeholder image" />
-                         </Media>
-                        <Input type="select" name="select" id="exampleSelect">
-                        </Input>
-                        </FormGroup> */}
+//                       {/* <FormGroup>
+//                         <Label for="exampleSelect">Pick a Thumbnail</Label>
+//                         <Media left href="#">
+//                         <Media object data-src="holder.js/64x64" alt="Generic placeholder image" />
+//                          </Media>
+//                         <Input type="select" name="select" id="exampleSelect">
+//                         </Input>
+//                         </FormGroup> */}
                     
-                      <FormGroup check>
-                        <Label check>
-                          <Input type="checkbox" />{' '}
-                          Monday
-                        </Label>
-                      </FormGroup>
-                      <FormGroup check>
-                        <Label check>
-                          <Input type="checkbox" />{' '}
-                          Tuesday
-                        </Label>
-                      </FormGroup>
-                      <FormGroup check>
-                        <Label check>
-                          <Input type="checkbox" />{' '}
-                          Wednesday
-                        </Label>
-                      </FormGroup>
-                      <FormGroup check>
-                        <Label check>
-                          <Input type="checkbox" />{' '}
-                          Thursday
-                        </Label>
-                      </FormGroup>
-                      <FormGroup check>
-                        <Label check>
-                          <Input type="checkbox" />{' '}
-                          Friday
-                        </Label>
-                      </FormGroup>
-                      <FormGroup check>
-                        <Label check>
-                          <Input type="checkbox" />{' '}
-                          Saturday
-                        </Label>
-                      </FormGroup>
-                      <FormGroup check>
-                        <Label check>
-                          <Input type="checkbox" />{' '}
-                          Sunday
-                        </Label>
-                      </FormGroup>
-                      <FormGroup>
-                        <FormText color="muted">
-                          This is some placeholder block-level help text for the above input.
-                          It's a bit lighter and easily wraps to a new line.
-                        </FormText>
-                      </FormGroup>
-                      <Button>Submit</Button>
-                    </Form>
-                  </React.Fragment>
-                  );
-                }
-              }
+//                     <div className="container">
+//         <div className="row mt-5">
+//           <div className="col-sm-12">
+//             <form onSubmit={this.handleFormSubmit}>
+//               {this.createCheckboxes()}
+
+//               <div className="form-group mt-2">
+//                 <button
+//                   type="button"
+//                   className="btn btn-outline-primary mr-2"
+//                   onClick={this.selectAll}
+//                 >
+//                   Select All
+//                 </button>
+//                 <button
+//                   type="button"
+//                   className="btn btn-outline-primary mr-2"
+//                   onClick={this.deselectAll}
+//                 >
+//                   Deselect All
+//                 </button>
+//                 <button type="submit" className="btn btn-primary"
+//                 onClick={this.saveNewLocation}>
+//                   Save
+//                 </button>
+//               </div>
+//             </form>
+//           </div>
+//         </div>
+//       </div>
+//                       <FormGroup>
+//                         <FormText color="muted">
+//                           This is some placeholder block-level help text for the above input.
+//                           It's a bit lighter and easily wraps to a new line.
+//                         </FormText>
+//                       </FormGroup>
+//                       <Button>Submit</Button>
+//                     </Form>
+//                   </React.Fragment>
+//                   );
+//                 }
+//               }
             
