@@ -18,6 +18,7 @@ const footerStyle = {
     background: 'rgb(140, 100, 70)',
     color: '#fff',
     textAlign: 'center',
+    verticalAlign: 'text-bottom',
     padding: '30px',
     fontFamily: 'helvetica',
     marginBottom: '30px'

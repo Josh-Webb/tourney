@@ -6,6 +6,10 @@ export default {
       return fetch(`${remoteURL}/users?user_name=${userName}`).then(e => e.json())
   },
 
+  getId(id) {
+    return fetch(`${remoteURL}/users/${id}`).then(e => e.json())
+},
+
   getAll(users) {
     return fetch(`${remoteURL}/users`).then(e => e.json())
   },

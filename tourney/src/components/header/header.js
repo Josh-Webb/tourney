@@ -5,6 +5,12 @@ import {withRouter} from 'react-router-dom'
 import collectSessStorage from '../../modules/UpdateProfileButton';
 
 class Header extends React.Component {
+  // handleClick = e => {
+  //   console.log('clicked logout', e);
+  //   sessionStorage.clear()
+  //   this.props.history.push('/')
+  // }
+
   render() {
     return (
       <Container style={headerStyle}>
@@ -16,6 +22,10 @@ class Header extends React.Component {
           onClick={() => {
             this.props.history.push(`/user/${collectSessStorage()}/edit`)
           }}>Update Preferences</button>
+          {/* <button
+          type="button"
+          className="btn btn-success"
+          onClick={this.handleClick}>Log Out</button> */}
         </Row>
         </Container >
     )

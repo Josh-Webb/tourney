@@ -22,6 +22,17 @@ export default class LibraryList extends Component {
       });
   };
 
+//   addGame = game => {
+//     const newNewState = {};
+//     LibraryManager.post(game)
+//     .then(LibraryManager.getAll)
+//     .then(games => {
+//       console.log('games', games);
+//       newNewState.games = games;
+//       this.setState(newNewState);
+//     });
+// }
+
   componentDidMount() {
     const newState = {};
     LibraryManager.getAll('games')
@@ -43,6 +54,7 @@ export default class LibraryList extends Component {
                 games={item}
                 {...this.props}
                 deleteGame={this.deleteGame}
+                addGame={this.addGame}
               />
             );
           })}
