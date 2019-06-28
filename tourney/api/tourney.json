@@ -1,34 +1,21 @@
 {
   "users": [
     {
+      "user_name": "Duncoon",
       "id": 1,
-      "address": "408 West College St, Greenbrier, TN",
-      "maxDistance": "10",
+      "password": "password",
+      "email": "email@email.com",
+      "address": "409 West College St, Greenbrier, TN",
+      "maxDistance": "15",
       "checkboxes": {
-        "monday": true,
+        "monday": false,
         "tuesday": false,
-        "wednesday": true,
+        "wednesday": false,
         "thursday": false,
         "friday": true,
-        "saturday": false,
+        "saturday": true,
         "sunday": false
       }
-    },
-    {
-      "user_name": "QueefMuffin",
-      "email": "mail@mail.com",
-      "password": "password",
-      "address": "",
-      "maxDistance": "",
-      "monday": false,
-      "tuesday": false,
-      "wednesday": false,
-      "thursday": false,
-      "friday": false,
-      "saturday": false,
-      "sunday": false,
-      "thumbnailId": 0.1871404760690194,
-      "id": 2
     },
     {
       "user_name": "joe",
@@ -36,13 +23,6 @@
       "password": "password",
       "address": "408 West College St, Greenbrier, TN",
       "maxDistance": "10",
-      "monday": false,
-      "tuesday": false,
-      "wednesday": false,
-      "thursday": false,
-      "friday": false,
-      "saturday": false,
-      "sunday": false,
       "thumbnailId": 0.7664786729734343,
       "id": 3,
       "checkboxes": {
@@ -56,32 +36,11 @@
       }
     },
     {
-      "id": 4,
-      "address": "408 West College St, Greenbrier, TN",
-      "maxDistance": "7",
-      "checkboxes": {
-        "monday": true,
-        "tuesday": false,
-        "wednesday": true,
-        "thursday": false,
-        "friday": true,
-        "saturday": false,
-        "sunday": false
-      }
-    },
-    {
       "user_name": "Gougi",
       "email": "email@email.com",
       "password": "password",
       "address": "1908 Sevier St, Nashville, TN",
       "maxDistance": "20",
-      "monday": false,
-      "tuesday": false,
-      "wednesday": false,
-      "thursday": false,
-      "friday": false,
-      "saturday": false,
-      "sunday": false,
       "thumbnailId": 0.2082817131946071,
       "id": 5,
       "checkboxes": {
@@ -95,18 +54,12 @@
       }
     },
     {
-      "user_name": "Akuma",
-      "email": "email@",
-      "password": "",
-      "id": 6
-    },
-    {
       "user_name": "doot",
       "email": "dat@dat.com",
       "password": "password",
       "id": 7,
-      "address": "Monday, Wednesday, Saturday, Sunday",
-      "maxDistance": "God why?",
+      "address": "1415 Shelby Ave, Nashville, TN",
+      "maxDistance": "4 miles",
       "checkboxes": {
         "monday": true,
         "tuesday": false,
@@ -116,18 +69,6 @@
         "saturday": false,
         "sunday": false
       }
-    },
-    {
-      "user_name": "DIO",
-      "email": "jojo@email.com",
-      "password": "password",
-      "id": 8
-    },
-    {
-      "user_name": "user",
-      "email": "user@user.com",
-      "password": "password",
-      "id": 9
     },
     {
       "user_name": "bb",
@@ -143,6 +84,312 @@
         "thursday": true,
         "friday": true,
         "saturday": false,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Joshuackbar",
+      "id": 12,
+      "email": "email@email.com",
+      "password": "password",
+      "address": "912 S 14th St, Nashville, TN",
+      "maxDistance": "4",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Elenta",
+      "id": 13,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "1113 Holly St, Nashville, TN",
+      "maxDistance": "4",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": false,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "SpradBae",
+      "id": 14,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "20 Rutledge St, Nashville, TN",
+      "maxDistance": "7",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": true
+      }
+    },
+    {
+      "user_name": "Fudge",
+      "id": 15,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "1628 Fatherland St, Nashville, TN",
+      "maxDistance": "8",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": true
+      }
+    },
+    {
+      "user_name": "Drum Girl",
+      "id": 16,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "4225 Harding Pike, Nashville, TN",
+      "maxDistance": "10",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": true
+      }
+    },
+    {
+      "user_name": "Angriest Pat",
+      "id": 17,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "350 Covenant Blvd, Murfreesboro, TN",
+      "maxDistance": "20",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Wooloo",
+      "id": 18,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "2190 Memorial Drive, Clarksville, TN",
+      "maxDistance": "35",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "User69",
+      "id": 19,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "4737 Post Rd, Nashville, TN 37205",
+      "maxDistance": "5",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Noice",
+      "id": 20,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "105 Lasalle Ct, Nashville, TN",
+      "maxDistance": "8",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": true
+      }
+    },
+    {
+      "user_name": "NoobKiller69",
+      "id": 21,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "4014 Utah Ave Nashville, TN 37209",
+      "maxDistance": "4",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": false,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Loon",
+      "id": 22,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "301 Demonbreun St, Nashville, TN",
+      "maxDistance": "12",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Squall",
+      "id": 23,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "1503 Meharry Blvd # 3, Nashville, TN 37208",
+      "maxDistance": "4",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Loowood",
+      "id": 24,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "5929 Deal Ave, Nashville, TN",
+      "maxDistance": "7",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Shoryuken",
+      "id": 25,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "1718B Greenwood Ave, Nashville, TN",
+      "maxDistance": "6",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Hoboken",
+      "id": 26,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "1617 Lebanon Pike, Nashville, TN",
+      "maxDistance": "35",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Gouki",
+      "id": 27,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "600 Oakland Dr #1, Madison, TN",
+      "maxDistance": "15",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": true,
+        "saturday": true,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Gouken",
+      "id": 28,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "535 Main St, Nashville, TN",
+      "maxDistance": "4",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "Ragin Demon",
+      "id": 29,
+      "password": "password",
+      "email": "email@email.com",
+      "address": "2600 Hillsbor Pike, Nashville, TN",
+      "maxDistance": "7",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": true,
         "sunday": false
       }
     }
@@ -162,69 +409,17 @@
       "id": 1
     },
     {
-      "address": "Monday, Wednesday, Saturday, Sunday",
+      "address": "299 Cowan St Nashville, TN",
       "checkboxes": {
         "monday": true,
-        "tuesday": false,
-        "wednesday": true,
-        "thursday": false,
-        "friday": false,
-        "saturday": true,
-        "sunday": true
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
       },
       "id": 2
-    },
-    {
-      "address": "1901 Sevier St, Nashville, TN",
-      "checkboxes": {
-        "monday": true,
-        "tuesday": true,
-        "wednesday": false,
-        "thursday": false,
-        "friday": true,
-        "saturday": false,
-        "sunday": false
-      },
-      "id": 3
-    },
-    {
-      "address": "Toogle Toggle",
-      "checkboxes": {
-        "monday": true,
-        "tuesday": true,
-        "wednesday": false,
-        "thursday": false,
-        "friday": true,
-        "saturday": false,
-        "sunday": false
-      },
-      "id": 4
-    },
-    {
-      "address": "Old Town Road",
-      "checkboxes": {
-        "monday": true,
-        "tuesday": false,
-        "wednesday": false,
-        "thursday": false,
-        "friday": false,
-        "saturday": false,
-        "sunday": false
-      },
-      "id": 5
-    },
-    {
-      "address": "ds;lfkajsd;lfj",
-      "checkboxes": {
-        "monday": true,
-        "tuesday": false,
-        "wednesday": false,
-        "thursday": false,
-        "friday": false,
-        "saturday": false,
-        "sunday": false
-      },
-      "id": 6
     },
     {
       "address": "500 Interstate Blv South, Nashville, TN",
@@ -234,10 +429,283 @@
         "wednesday": false,
         "thursday": true,
         "friday": false,
+        "saturday": true,
+        "sunday": false
+      },
+      "id": 3
+    },
+    {
+      "address": "1227 7th Ave N, Nashville, TN 37208",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": false,
+        "sunday": true
+      },
+      "id": 4
+    },
+    {
+      "address": "68 Music Square E, Nashville, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": true
+      },
+      "id": 5
+    },
+    {
+      "address": "700 Woodland St, Nashville, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": true,
+        "sunday": false
+      },
+      "id": 6
+    },
+    {
+      "address": "616 17th Ave N, Nashville, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": true,
         "saturday": false,
         "sunday": false
       },
       "id": 7
+    },
+    {
+      "address": "801 Percy Warner Blvd, Nashville, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 8
+    },
+    {
+      "address": "3720 James Kay Ln, Hermitage, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": true
+      },
+      "id": 9
+    },
+    {
+      "address": "3220 Vailview Dr, Nashville, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": false
+      },
+      "id": 10
+    },
+    {
+      "address": "5260 Hickory Hollow Pkwy #202, Antioch, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": true,
+        "sunday": false
+      },
+      "id": 11
+    },
+    {
+      "address": "401 S 20th St, Nashville, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": false,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 12
+    },
+    {
+      "address": " 384 Thompson Ln, Nashville, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": true
+      },
+      "id": 13
+    },
+    {
+      "address": "2801 Tucker Rd, Nashville, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": true,
+        "sunday": true
+      },
+      "id": 14
+    },
+    {
+      "address": "2720 Old Lebanon Rd #104, Nashville, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": true,
+        "friday": true,
+        "saturday": true,
+        "sunday": false
+      },
+      "id": 15
+    },
+    {
+      "address": "1103 Calvin Ave, Nashville, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": true,
+        "sunday": false
+      },
+      "id": 16
+    },
+    {
+      "address": "105 Gallatin Pike N, Madison, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": true
+      },
+      "id": 17
+    },
+    {
+      "address": "1574C Gallatin Pike N, Madison, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": true,
+        "sunday": true
+      },
+      "id": 18
+    },
+    {
+      "address": "1190 Long Hollow Pike, Gallatin, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": true,
+        "sunday": true
+      },
+      "id": 19
+    },
+    {
+      "address": "1923 Madison St, Clarksville, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": true,
+        "sunday": true
+      },
+      "id": 20
+    },
+    {
+      "address": "1000 Rivergate Pkwy, Madison, TN 37115",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": true,
+        "saturday": true,
+        "sunday": true
+      },
+      "id": 21
+    },
+    {
+      "address": "4202, 3955 Nolensville Pike #300, Nashville, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": true
+      },
+      "id": 22
+    },
+    {
+      "address": "3 S Lowry St, Smyrna, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": true,
+        "sunday": true
+      },
+      "id": 23
+    },
+    {
+      "address": "258 River Rock Blvd, Murfreesboro, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 24
     }
   ],
   "games": [
