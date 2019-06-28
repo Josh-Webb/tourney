@@ -13,6 +13,8 @@ import NavBar from './nav/navBar';
 import './applicationView.css';
 import '../modules/UpdateProfileButton'
 import collectSessStorage from '../modules/UpdateProfileButton';
+import Welcome from './welcome/welcome'
+import YourProfile from './profile/yourProfile'
 
 
 
@@ -24,20 +26,30 @@ class ApplicationView extends Component {
         tourneyPage: [],
         login: [],
         register: [],
-        updateProfile: []
+        updateProfile: [],
+        profile: []
     };
 
     isAuthenticated = () => sessionStorage.getItem('credentials')  !== null;
 
     render() {
         console.log('ApplicationView Render');
-        console.log(collectSessStorage())
+        // console.log(collectSessStorage())
         
 
         return (
             <React.Fragment>
                 <NavBar />
+                <Route exact path="/" component={Welcome} />
                 <Route exact path="/login" component={Login} />
+                <Route exact path="/profileview" render={props => {
+                    return (
+                        <YourProfile
+                        {...props}
+                        userProfile={this.state.userProfile}
+                        />
+                    )
+                }} />
                 <Route exact path="/signup"
                 render={props => {
                     return (

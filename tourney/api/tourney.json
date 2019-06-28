@@ -105,14 +105,43 @@
       "email": "dat@dat.com",
       "password": "password",
       "id": 7,
-      "address": "Why?",
+      "address": "Monday, Wednesday, Saturday, Sunday",
       "maxDistance": "God why?",
       "checkboxes": {
         "monday": true,
         "tuesday": false,
-        "wednesday": true,
+        "wednesday": false,
         "thursday": false,
         "friday": false,
+        "saturday": false,
+        "sunday": false
+      }
+    },
+    {
+      "user_name": "DIO",
+      "email": "jojo@email.com",
+      "password": "password",
+      "id": 8
+    },
+    {
+      "user_name": "user",
+      "email": "user@user.com",
+      "password": "password",
+      "id": 9
+    },
+    {
+      "user_name": "bb",
+      "email": "cat@cat.com",
+      "password": "password",
+      "id": 10,
+      "address": "1901 Sevier St, Nashville, TN",
+      "maxDistance": "8 miles",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": true,
+        "friday": true,
         "saturday": false,
         "sunday": false
       }
@@ -196,18 +225,46 @@
         "sunday": false
       },
       "id": 6
+    },
+    {
+      "address": "500 Interstate Blv South, Nashville, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 7
     }
   ],
   "games": [
     {
-      "id": 1,
-      "gameName": "Street Fighter V",
-      "gameConsole": "PS4"
-    },
-    {
       "id": 2,
       "gameName": "Ultimate Marvel vs Capcom 3",
       "gameConsole": "PS4"
+    },
+    {
+      "gameName": "Mortal Kombat XI",
+      "gameConsole": "PS4",
+      "id": 4
+    },
+    {
+      "gameName": "Super Smash Bros Ultimate",
+      "gameConsole": "Switch",
+      "id": 5
+    },
+    {
+      "gameName": "Samurai Shodown",
+      "gameConsole": "PS4",
+      "id": 6
+    },
+    {
+      "gameName": "Super Smash Bros Melee",
+      "gameConsole": "GameCube",
+      "id": 7
     }
   ],
   "tourneys": [
@@ -239,6 +296,21 @@
       "id": 1,
       "user_id": 1,
       "game_id": 1
+    },
+    {
+      "gameId": 2,
+      "userId": 7,
+      "id": 3
+    },
+    {
+      "game_id": 1,
+      "user_id": 7,
+      "id": 4
+    },
+    {
+      "game_id": 2,
+      "user_id": 10,
+      "id": 5
     }
   ],
   "tips": [

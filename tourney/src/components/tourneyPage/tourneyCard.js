@@ -23,12 +23,6 @@ class TourneyCard extends Component {
         {/* <button onClick={this.handleClick} disabled={this.state.saveDisabled}>
           Delete
         </button> */}
-        <button
-          type="button"
-          className="btn btn-success"
-          onClick={() => {
-            this.props.history.push(`/events/${this.props.event.id}/edit`)
-          }}>Edit</button>
         <br/><br/>
       </div>
     );

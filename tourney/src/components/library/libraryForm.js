@@ -9,13 +9,13 @@ export default class LibraryForm extends Component {
     };
 
     addGame = game => {
-        const newNewState = {};
+        const newState = {};
         LibraryManager.post(game)
         .then(LibraryManager.getAll)
         .then(games => {
           console.log('games', games);
-          newNewState.games = games;
-          this.setState(newNewState);
+          newState.games = games;
+          this.setState(newState);
         });
     }
     saveNewGame = evt => {

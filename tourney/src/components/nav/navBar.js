@@ -17,8 +17,9 @@ export default class NavBar extends React.Component {
             <NavLink href="/tourney">Tourney</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/user/:userId(\d+)/edit">Update Profile</NavLink>
+            <NavLink href="/profileview">View Profile</NavLink>
           </NavItem>
+          
         </Nav>
       </div>
     );
