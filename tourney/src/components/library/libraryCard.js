@@ -4,6 +4,8 @@ import {withRouter} from 'react-router-dom'
 import './library.css';
 import collectSessStorage from '../../modules/UpdateProfileButton'
 import ConnectionManager from '../../modules/ConnectionManager'
+import generator from '../../modules/Generator'
+import parseGameId from "../../modules/ParseGameId"
 
 
 class LibraryCard extends Component {
@@ -23,6 +25,10 @@ class LibraryCard extends Component {
     ConnectionManager.post(connection);
 
 
+  generateTournament = id =>
+    generator(id);  
+
+
   handleOtherClick = e => {
       console.log('click', e, this.props.games.id);
       this.setState({
@@ -35,6 +41,17 @@ class LibraryCard extends Component {
       this.addConnection(connectionInfo);
   }
 
+  handleOtherOtherClick = e => {
+      console.log('click', e, this.props.games.id)
+      let gid = this.props.games.id;
+      this.setState({
+          saveDisabled: true
+      });
+      
+      this.generateTournament(gid)
+      console.log(this.props.games.id, "hOoC")
+  }
+
   render() {
     return (
       <div className="library-card">
@@ -45,6 +62,9 @@ class LibraryCard extends Component {
         </button>
         <button type="button" className="btn btn-success" onClick={this.handleOtherClick} disabled={this.state.saveDisabled}>
           Add Game to Games Played
+        </button>
+        <button type="button" className="btn btn-success" onClick={this.handleOtherOtherClick} disabled={this.state.saveDisabled}>
+          Generator Tourney
         </button>
         <br/><br/>
       </div>

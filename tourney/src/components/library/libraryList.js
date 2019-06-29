@@ -8,7 +8,8 @@ import LibraryManager from '../../modules/LibraryManager';
 
 export default class LibraryList extends Component {
   state = {
-    games: []
+    games: [],
+    users: []
   };
 
   deleteGame = id => {
