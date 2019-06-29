@@ -37,13 +37,13 @@ const generator = (gameId) => {
             // let fridayCounter = 0;
             // let saturdayCounter = 0;
             // let sundayCounter = 0;
-            let mondayAddressesArray = [];
-            let tuesdayAddressesArray = [];
-            let wednesdayAddressesArray = [];
-            let thursdayAddressesArray = [];
-            let fridayAddressesArray = [];
-            let saturdayAddressesArray = [];
-            let sundayAddressesArray = [];
+            let mondayAddressesArray = [{day: "monday"}];
+            let tuesdayAddressesArray = [{day: "tuesday"}];
+            let wednesdayAddressesArray = [{day: "wednesday"}];
+            let thursdayAddressesArray = [{day: "thursday"}];
+            let fridayAddressesArray = [{day: "friday"}];
+            let saturdayAddressesArray = [{day: "saturday"}];
+            let sundayAddressesArray = [{day: "sunday"}];
             playerIdArray.forEach(function(element) {
                 console.log(element)
                 UserManager.getId(element)
@@ -115,16 +115,17 @@ const generator = (gameId) => {
                     console.log(saturdayAddressesArray, "saturday addresses array")
                     console.log(sundayAddressesArray, "sunday addresses array")
                     // let allCountersArray = [mondayCounter, tuesdayCounter, wednesdayCounter, thursdayCounter, fridayCounter, saturdayCounter, sundayCounter]
-                    let allAddressesArray = [mondayAddressesArray, tuesdayAddressesArray, wednesdayAddressesArray, thursdayAddressesArray, fridayAddressesArray, saturdayAddressesArray, sundayAddressesArray]
+                    let allAddressesArray = [mondayAddressesArray, tuesdayAddressesArray, wednesdayAddressesArray, thursdayAddressesArray, fridayAddressesArray,saturdayAddressesArray, sundayAddressesArray]
                     // let sortedCounterArray = (allCountersArray.sort(function(a, b){return b.length - a.length}))
                     // console.log("All Counters Array", allCountersArray)\
                     let orderedAddressesArray = ((allAddressesArray.sort(function(a,b){return b.length - a.length})))
                     let winnerAddressesArray = orderedAddressesArray[0];
-                    let winnerName = orderedAddressesArray[0].keys();
+                    let winnerDay = winnerAddressesArray[0].day;
                     console.log("All Addresses Array", allAddressesArray)
                     console.log((allAddressesArray.sort(function(a, b){return b.length - a.length})), "ordered with length")
                     console.log("WINNER ADDRESSES", winnerAddressesArray)
-                    console.log(winnerName)
+                    console.log("winner day", winnerDay)
+
             });
         })
 }
