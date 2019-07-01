@@ -75,16 +75,17 @@
       "email": "cat@cat.com",
       "password": "password",
       "id": 10,
-      "address": "1901 Sevier St, Nashville, TN",
-      "maxDistance": "8 miles",
+      "address": "500 ",
+      "maxDistance": "666",
       "checkboxes": {
         "monday": true,
-        "tuesday": false,
-        "wednesday": false,
+        "tuesday": true,
+        "wednesday": true,
         "thursday": true,
         "friday": true,
-        "saturday": false,
-        "sunday": false
+        "saturday": true,
+        "sunday": true,
+        "Monday": true
       }
     },
     {
@@ -381,7 +382,7 @@
       "id": 29,
       "password": "password",
       "email": "email@email.com",
-      "address": "2600 Hillsbor Pike, Nashville, TN",
+      "address": "2600 Hillsboro Pike, Nashville, TN",
       "maxDistance": "7",
       "checkboxes": {
         "monday": false,
@@ -715,19 +716,9 @@
       "gameConsole": "PS4"
     },
     {
-      "id": 2,
-      "gameName": "Ultimate Marvel vs Capcom 3",
-      "gameConsole": "PS4"
-    },
-    {
       "gameName": "Mortal Kombat XI",
       "gameConsole": "PS4",
       "id": 4
-    },
-    {
-      "gameName": "5",
-      "gameConsole": "PS4",
-      "id": 5
     }
   ],
   "tourneys": [
@@ -752,6 +743,13 @@
       "losersIds": [],
       "locationAddress": "500 Interstate Blvd South, Nashville, TN",
       "date": "2019-06-27"
+    },
+    {
+      "name": "article7",
+      "game": "Samura HoDown",
+      "locationAddress": "",
+      "date": "",
+      "id": 3
     }
   ],
   "connections": [
@@ -864,6 +862,11 @@
       "id": 24,
       "user_id": 29,
       "game_id": 1
+    },
+    {
+      "game_id": 4,
+      "user_id": 10,
+      "id": 25
     }
   ],
   "tips": [
