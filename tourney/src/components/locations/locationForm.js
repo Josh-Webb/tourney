@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import LocationsManager from '../../modules/LocationsManager';
 import { Media, Button, Form, FormGroup, Label, Input, FormText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import './locations.css';
+// import './locations.css';
 import Checkbox from "../../modules/Checkboxes";
 
 const OPTIONS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
@@ -59,7 +59,7 @@ export default class LocationForm extends Component {
 
   createCheckbox = option => (
     <Checkbox
-      label={option}
+      label={option.charAt(0).toUpperCase()+option.slice(1)}
       isSelected={this.state.checkboxes[option]}
       onCheckboxChange={this.handleCheckboxChange}
       key={option}
@@ -106,8 +106,11 @@ export default class LocationForm extends Component {
   render() {
     return (
       <React.Fragment>
+
+
+        <div className="container">
           <div className="form-group">
-                        <label htmlFor="address">Address</label>
+                        <label htmlFor="address">What's the Address of the Venue?</label>
                         <input type="text"
                         required
                         className="form-control"
@@ -116,12 +119,11 @@ export default class LocationForm extends Component {
                         placeholder="Address"
                         />
                     </div>
-
-
-        <div className="container">
+              <div className="header">What Day or Days is this Venue Available</div>
         <div className="row mt-5">
           <div className="col-sm-12">
             <form onSubmit={this.handleFormSubmit}>
+                
               {this.createCheckboxes()}
 
               <div className="form-group mt-2">

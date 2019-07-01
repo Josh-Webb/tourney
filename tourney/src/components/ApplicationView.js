@@ -15,6 +15,7 @@ import '../modules/UpdateProfileButton'
 import collectSessStorage from '../modules/UpdateProfileButton';
 import Welcome from './welcome/welcome'
 import YourProfile from './profile/yourProfile'
+import './applicationView.css'
 
 
 
@@ -39,7 +40,7 @@ class ApplicationView extends Component {
 
         return (
             <React.Fragment>
-                <NavBar />
+                
                 <Route exact path="/" component={Welcome} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/profileview" render={props => {

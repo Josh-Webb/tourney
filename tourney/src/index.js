@@ -10,7 +10,9 @@ import NavBar from './components/nav/navBar'
 
 ReactDOM.render(
 <Router>
+    <div className="router">
     <Header />
     <ApplicationView />
-    <Footer />
+    {/* <Footer /> */}
+    </div>
 </Router>, document.getElementById('root'));

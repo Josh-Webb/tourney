@@ -20,7 +20,6 @@ const footerStyle = {
     textAlign: 'center',
     verticalAlign: 'text-bottom',
     padding: '30px',
-    fontFamily: 'helvetica',
-    marginBottom: '30px'
+    fontFamily: 'helvetica'
   }
   

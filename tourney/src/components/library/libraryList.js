@@ -1,6 +1,6 @@
 //home for library cards and form.
 import React, { Component } from 'react';
-import './library.css';
+// import './library.css';
 import { Link } from 'react-router-dom';
 import LibraryCard from './libraryCard';
 import LibraryForm from './libraryForm'
@@ -8,8 +8,11 @@ import LibraryManager from '../../modules/LibraryManager';
 
 export default class LibraryList extends Component {
   state = {
-    games: []
+    games: [],
+    users: []
   };
+
+
 
   deleteGame = id => {
     const newState = {};
@@ -22,16 +25,16 @@ export default class LibraryList extends Component {
       });
   };
 
-//   addGame = game => {
-//     const newNewState = {};
-//     LibraryManager.post(game)
-//     .then(LibraryManager.getAll)
-//     .then(games => {
-//       console.log('games', games);
-//       newNewState.games = games;
-//       this.setState(newNewState);
-//     });
-// }
+  addGame = (game) => {
+    const newNewState = {};
+    LibraryManager.post(game)
+    .then(LibraryManager.getAll)
+    .then(games => {
+      console.log('games', games);
+      newNewState.games = games;
+      this.setState(newNewState);
+    });
+}
 
   componentDidMount() {
     const newState = {};
@@ -44,7 +47,9 @@ export default class LibraryList extends Component {
     return (
         <div className="library">
             <section className="libraryForm">
-                <LibraryForm />
+                <LibraryForm
+                {...this.props}
+                addGame={this.addGame} />
             </section>
         <section className="libraryCard">
           {this.state.games.map(item => {
