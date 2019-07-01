@@ -13,17 +13,17 @@ class TourneyCard extends Component {
   render() {
     return (
       <div className="tourney-card">
-        <h2>{this.props.tourneys.name}</h2>
-        <h6>{this.props.tourneys.game}</h6>
-        <h3>{this.props.tourneys.date}</h3>
+        <h2 className="tourneyName">{this.props.tourneys.name}</h2>
+        <h6 className="tourneyGame">{this.props.tourneys.game}</h6>
+        <h3 className="tourneyDate">{this.props.tourneys.date}</h3>
         
-        <h5>{this.props.tourneys.locationAddress}</h5>
+        <h5 className="tourneyAddress">{this.props.tourneys.locationAddress}</h5>
         
-        <br/>
+        
         {/* <button onClick={this.handleClick} disabled={this.state.saveDisabled}>
           Delete
         </button> */}
-        <br/><br/>
+        
       </div>
     );
   }

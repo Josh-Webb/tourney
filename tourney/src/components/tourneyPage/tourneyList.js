@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import TourneyCard from './tourneyCard';
 import TourneyManager from '../../modules/TourneyManager';
-// import TourneyInvite from './tourneyPage/tourneyInvite';
+import TourneyInvite from './tourneyInvite';
 
 export default class TourneyList extends Component {
   state = {
@@ -21,6 +21,11 @@ export default class TourneyList extends Component {
   render() {
     return (
       <div className="tourneyList">
+          {/* <section className="tourneyInvite">
+              <TourneyInvite
+              {...this.props}
+              />
+          </section> */}
         <section className="tourneyCard">
           {this.state.tourneys.map(item => {
             return (

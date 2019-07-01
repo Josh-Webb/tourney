@@ -100,9 +100,9 @@ class Header extends React.Component {
     return (
       <div className="header">
         <Navbar expand="md">
-          <NavbarBrand href="/">Tourney</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
+          <NavbarBrand>Tourney</NavbarBrand>
+          {/* <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar> */}
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <Link type="button" to="/library" className="btn">Library</Link>
@@ -115,12 +115,23 @@ class Header extends React.Component {
                 <Link type="button" to="/tourney" className="btn">Tournaments</Link>
               </NavItem>
               <NavItem>
-              <Link
+              <div
           type="button"
           className="btn btn-success"
           onClick={() => {
             this.props.history.push(`/user/${collectSessStorage()}/edit`)
-          }}>Update Preferences</Link>
+          }}>Update Preferences</div>
+              </NavItem>
+              <NavItem>
+              <Link
+          type="button"
+          className="btn btn-success"
+          to="/"
+          onClick={() => {
+            console.log(sessionStorage.getItem('credentials'))
+            sessionStorage.setItem("credentials", null);
+            console.log(sessionStorage.getItem('credentials'))
+          }}>Log Out</Link>
               </NavItem>
               {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -140,7 +151,7 @@ class Header extends React.Component {
                 </DropdownMenu> */}
               {/* </UncontrolledDropdown> */}
             </Nav>
-          </Collapse>
+          {/* </Collapse> */}
         </Navbar>
       </div>
     );

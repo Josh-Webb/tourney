@@ -62,10 +62,11 @@ class RegisterTwo extends Component {
 
   createCheckbox = option => (
     <Checkbox
-      label={option}
+      label={option.charAt(0).toUpperCase()+option.slice(1)}
       isSelected={this.state.checkboxes[option]}
       onCheckboxChange={this.handleCheckboxChange}
       key={option}
+      className="checkbox"
     />
   );
 
@@ -121,7 +122,7 @@ class RegisterTwo extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="maxDistance">maxDistance</label>
+                        <label htmlFor="maxDistance">Max Distance Willing To Travel</label>
                         <input type="text"
                         required
                         className="form-control"
