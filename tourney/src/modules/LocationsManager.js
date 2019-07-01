@@ -7,6 +7,9 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/locations`).then(e => e.json())
   },
+  getDays(day){
+    return fetch(`${remoteURL}/locations?checkboxes.${(day)}=true`).then(e => e.json())
+  },
   deleteLocation(id) {
     return fetch(`${remoteURL}/locations/${id}`, {
       method: "DELETE",

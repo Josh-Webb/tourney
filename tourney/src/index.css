@@ -1,6 +1,5 @@
 .router {
   display: flex;
-  border: 5px solid yellow;
   flex-direction: column;
   align-content: space-between;
 }

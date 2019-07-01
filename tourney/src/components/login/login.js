@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import UserManager from '../../modules/UserManager';
+import collectSessStorage from '../../modules/UpdateProfileButton'
 import { get } from 'http';
 
 export default class Login extends Component {
@@ -37,7 +38,7 @@ export default class Login extends Component {
           })
         );
         console.log(sessionStorage.getItem('credentials'))
-        this.props.history.push('/');
+        this.props.history.push('/tourney');
       } else {
         alert('Please sign up');
       }

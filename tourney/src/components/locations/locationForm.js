@@ -119,29 +119,28 @@ export default class LocationForm extends Component {
                         placeholder="Address"
                         />
                     </div>
-              <div className="header">What Day or Days is this Venue Available</div>
+              <div className="form-group">What Day or Days is this Venue Available</div>
         <div className="row mt-5">
           <div className="col-sm-12">
             <form onSubmit={this.handleFormSubmit}>
-                
-              {this.createCheckboxes()}
+            {this.createCheckboxes()}
 
               <div className="form-group mt-2">
                 <button
                   type="button"
-                  className="btn btn-outline-primary mr-2"
+                  className="btn"
                   onClick={this.selectAll}
                 >
                   Select All
                 </button>
                 <button
                   type="button"
-                  className="btn btn-outline-primary mr-2"
+                  className="btn"
                   onClick={this.deselectAll}
                 >
                   Deselect All
                 </button>
-                <button type="submit" className="btn btn-primary"
+                <button type="submit" className="btn"
                 onClick={this.saveNewLocation}>
                   Save
                 </button>

@@ -43,6 +43,14 @@ export default class RegisterOne extends Component {
 
         };
         console.log("user", user)
+        // sessionStorage.setItem(
+        //     'credentials',
+        //     JSON.stringify({
+        //         user_name: this.state.user_name,
+        //         email: this.state.email,
+        //         password: 
+        //     })
+        // )
 
         this.addUser(user).then(() => this.props.history.push('/'));
     };
