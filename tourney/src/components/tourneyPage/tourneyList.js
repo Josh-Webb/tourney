@@ -57,6 +57,7 @@ export default class TourneyList extends Component {
               <TourneyInvite
               {...this.props}
               addTourney={this.addTourney}
+              
               />
           </section>
         <section className="tourneyCard">

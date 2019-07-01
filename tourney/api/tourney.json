@@ -726,30 +726,8 @@
       "id": 1,
       "game": "Street Fighter V",
       "name": "SmashVille",
-      "winnersIds": [
-        1
-      ],
-      "losersIds": [],
       "locationAddress": "500 Interstate Blvd South, Nashville, TN",
       "date": "2019-06-27"
-    },
-    {
-      "id": 2,
-      "game": "Street Fighter V",
-      "name": "SmashVille",
-      "winnersIds": [
-        1
-      ],
-      "losersIds": [],
-      "locationAddress": "500 Interstate Blvd South, Nashville, TN",
-      "date": "2019-06-27"
-    },
-    {
-      "name": "article7",
-      "game": "Samura HoDown",
-      "locationAddress": "",
-      "date": "",
-      "id": 3
     }
   ],
   "connections": [

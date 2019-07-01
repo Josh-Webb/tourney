@@ -17,6 +17,7 @@ export default class TourneyInvite extends Component {
       addresses: []
     };
 
+    
 
    
     
@@ -26,12 +27,22 @@ export default class TourneyInvite extends Component {
         const tourney = {
             name: this.state.name,
             game: this.state.game,
-            locationAddress: this.state.locationAddress,
-            date: this.state.locationAddress
-        };
+            locationAddress: this.state.venue,
+            date: this.state.date
+        }
 
         this.props.addTourney(tourney)
     };
+
+    randomMonday = e => {
+        console.log('click', e, this.props.monday);
+        var rand = this.props.monday[Math.floor(Math.random() * this.props.monday)]
+        console.log(rand, 'rand')
+        }
+
+        
+
+    
 
     
     
@@ -51,7 +62,7 @@ export default class TourneyInvite extends Component {
                     <div className="form-group">
                         <label htmlFor="name">Name Your Tournament</label>
                         <input type="text"
-                        required
+                       
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="name"
@@ -62,29 +73,35 @@ export default class TourneyInvite extends Component {
                     <div className="form-group">
                         <label htmlFor="game">Game</label>
                         <input type="text"
-                        required
+                        
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="game"
                         placeholder="Game"
                         />
                     </div>
+                    <div>
+                    </div>
+                    {/* <div>
+                    {this.buildOption('monday')}
+                    </div> */}
+                    <div className="form-group">
+                        <label htmlFor="date">Date</label> 
+                        <input type="text"
+                        className="form-control"
+                        onChange={this.handleFieldChange}
+                        id="date"
+                        placeholder="Date"/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="venue">Venue</label>
+                        <input type="text"
+                        className="form-control"
+                        onChange={this.handleFieldChange}
+                        id="venue"
+                        placeholder="Venue" />
+                    </div>
                     
-                    {/* {function () {
-        let planets = this.state.addresses;
-        let optionItems = planets.map((planet) =>
-                <option key={planet.locationAddress}>{planet.locationAddress}</option>
-            );
-
-        return (
-         <div>
-             <select>
-                {optionItems}
-             </select>
-         </div>
-        )
-    }
-} */}
                     
                      <button
                      className="btn btn-primary"

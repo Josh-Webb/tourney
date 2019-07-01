@@ -238,8 +238,7 @@ class LibraryCard extends Component {
         return ( <div className = "library-card" >
             <h2 > {
                 this.props.games.gameName
-            } </h2> <
-            h6> For the {
+            } </h2> <h6> For the {
                 " " + this.props.games.gameConsole
             } </h6> <
             button type = "button"
