@@ -712,7 +712,7 @@
     {
       "id": 1,
       "gameName": "Street Fighter V",
-       "gameConsole": "PS4"
+      "gameConsole": "PS4"
     },
     {
       "id": 2,
@@ -725,19 +725,9 @@
       "id": 4
     },
     {
-      "gameName": "Super Smash Bros Ultimate",
-      "gameConsole": "Switch",
+      "gameName": "9",
+      "gameConsole": "9",
       "id": 5
-    },
-    {
-      "gameName": "Samurai Shodown",
-      "gameConsole": "PS4",
-      "id": 6
-    },
-    {
-      "gameName": "Super Smash Bros Melee",
-      "gameConsole": "GameCube",
-      "id": 7
     }
   ],
   "tourneys": [

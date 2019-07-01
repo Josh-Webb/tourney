@@ -1,3 +1,25 @@
-body {
-    background-color: rebeccapurple
+.gameForm {
+    border: 5px solid black;
+    padding: 10px;
+    background-color: slategray;
+    margin: 40px   ;
+    border-radius: 25px;
+}
+
+.form-control {
+    width: 50%;
+}
+
+.library-card {
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: slategray;
+    border-radius: 20px;
+
+}
+
+.btn {
+    background-color: red;
+    border: 
 }

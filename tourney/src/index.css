@@ -1,6 +1,6 @@
-
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.router {
+  display: flex;
+  border: 5px solid yellow;
+  flex-direction: column;
+  align-content: space-between;
 }

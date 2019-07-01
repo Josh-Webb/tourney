@@ -7,15 +7,16 @@ import './DistanceMatrixManager';
 import './ParseGameId'
 import UserManager from "./UserManager"
 import ConnectionManager from "./ConnectionManager";
+import LocationsManager from "./LocationsManager"
 import parseGameId from "./ParseGameId";
 import LibraryCard from '../components/library/libraryCard'
+import parseAddresses from './AddressArray'
 
 
 const generator = (gameId) => {
     ConnectionManager.getAll()
         .then(connections => {
             console.log("connections", connections)
-            console.log(connections[3].user_id)
             console.log(connections.length)
             let playerIdArray = [];
             let arrayLength = connections.length
@@ -28,7 +29,7 @@ const generator = (gameId) => {
                 } 
                  else {
                      console.log("nope")
-                }
+                } 
             }
             // let mondayCounter = 0;
             // let tuesdayCounter = 0;
@@ -44,6 +45,7 @@ const generator = (gameId) => {
             let fridayAddressesArray = [{day: "friday"}];
             let saturdayAddressesArray = [{day: "saturday"}];
             let sundayAddressesArray = [{day: "sunday"}];
+            let day = [];
             playerIdArray.forEach(function(element) {
                 console.log(element)
                 UserManager.getId(element)
@@ -125,11 +127,138 @@ const generator = (gameId) => {
                     console.log((allAddressesArray.sort(function(a, b){return b.length - a.length})), "ordered with length")
                     console.log("WINNER ADDRESSES", winnerAddressesArray)
                     console.log("winner day", winnerDay)
+                    day.push(winnerDay)
+                    console.log(day)
+                     
+                })})
+                
+                    console.log("finished")
+                    let mondayArray = [];
+                    let tuesdayArray = [];
+                    let wednesdayArray = [];
+                    let thursdayArray = [];
+                    let fridayArray = [];
+                    let saturdayArray = [];
+                    let sundayArray = [];
+                    
+                    LocationsManager.getAll() 
+                        .then(locations => {
+                            console.log(locations, "locations")
+                            let locationArray = locations
+                            console.log(locationArray, "locationsArray")
+                            console.log(locations, "locations") 
+                            console.log(day, "day")
+                            for (let i = 0; i < locationArray.length; i++) {
+                                if (locationArray[i].checkboxes.monday === true) {
+                                    mondayArray.push(locationArray[i].address)
+                                }
+                                else {}
+                            }
+                            for (let i = 0; i < locationArray.length; i++) {
+                                if (locationArray[i].checkboxes.tuesday === true) {
+                                    tuesdayArray.push(locationArray[i].address)
+                                }
+                                else {}
+                            }
+                            for (let i = 0; i < locationArray.length; i++) {
+                                if (locationArray[i].checkboxes.wednesday === true) {
+                                    wednesdayArray.push(locationArray[i].address)
+                                }
+                                else {}
+                            }
+                            for (let i = 0; i < locationArray.length; i++) {
+                                if (locationArray[i].checkboxes.thursday === true) {
+                                    thursdayArray.push(locationArray[i].address)
+                                }
+                                else {}
+                            }
+                            for (let i = 0; i < locationArray.length; i++) {
+                                if (locationArray[i].checkboxes.friday === true) {
+                                    fridayArray.push(locationArray[i].address)
+                                }
+                                else {}
+                            }
+                            for (let i = 0; i < locationArray.length; i++) {
+                                if (locationArray[i].checkboxes.saturday === true) {
+                                    saturdayArray.push(locationArray[i].address)
+                                }
+                                else {}
+                            }
+                            for (let i = 0; i < locationArray.length; i++) {
+                                if (locationArray[i].checkboxes.sunday === true) {
+                                    sundayArray.push(locationArray[i].address)
+                                }
+                                else {}
+                            }
+                                
+                            console.log("MONDAY VENUES", mondayArray)
+                            console.log("TUESDAY VENUES", tuesdayArray)
+                            console.log("WEDNESDAY VENUES", wednesdayArray)
+                            console.log("THURSDAY VENUES", thursdayArray)
+                            console.log("FRIDAY VENUES", fridayArray)
+                            console.log("SATURDAY VENUES", saturdayArray)
+                            console.log("SUNDAY VENUES", sundayArray)
 
-            });
-        })
-}
-        )
-}
+                        }
+
+                            
+                        );
+                        let venueDayArrays = [mondayArray, tuesdayArray, wednesdayArray, thursdayArray, fridayArray, saturdayArray, sundayArray];
+                        let winnerArray = [];
+                        let fucking = day[0];
+                        console.log(day, fucking, this.props.winnerAddressesArray[0].day, "kill me")
+                        
+                        console.log(venueDayArrays, "venueDayArray")
+                        
+                            if (day[0] === "monday") {
+                                winnerArray.push(mondayArray)
+                                console.log("monday", day)
+                            } else if (day[0] === "tuesday") {
+                                winnerArray.push(tuesdayArray)
+                                console.log("tuesday", tuesdayArray)
+                            } else if (day[0] === "wednesday") {
+                                winnerArray.push(wednesdayArray)
+                                console.log('wednesday', winnerArray)
+                            } else if (day[0] === "thursday") {
+                                winnerArray.push(thursdayArray)
+                                console.log("thursday", winnerArray)
+                            } else if (day[0] === "friday") {
+                                winnerArray.push(fridayArray)
+                                console.log('friday', winnerArray)
+                            } else if (day[0] === "saturday") {
+                                winnerArray.push(saturdayArray)
+                                console.log("saturday", winnerArray)
+                            } else if (day[0] === "sunday") {
+                                winnerArray.push(sundayArray)
+                                console.log("sunday", winnerArray)
+                            } else {
+                                console.log("I fucked up. :(", day)
+                            }
+                            
+                            console.log(winnerArray, "winnerArray")
+                        
+                    
+                    // LocationsManager.getAll()
+                    // .then(venues => {
+                    //         for (let i = 1; i < venues.length; i++){
+                    //         if (venues[i].checkboxes.winnerDay === true) {
+                    //             console.log("yep")
+                    //             destinationsArray.push(venues[i].address)
+                    //         } else {
+                    //             console.log("nope")
+                    //         }
+                    //         }
+                    //         console.log(destinationsArray, "destinationsArray")
+
+                    // }
+                    // // let dayAddresses = (parseAddresses(day))
+                    // // console.log(dayAddresses, "addresses")
+                    // )
+                    
+                    
+        })}
+
+        
+    
 
 export default generator

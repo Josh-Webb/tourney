@@ -1,6 +1,8 @@
 //library add game form.
 import React, { Component } from 'react';
+import LibraryList from './libraryList'
 import LibraryManager from '../../modules/LibraryManager';
+import './library.css'
 
 export default class LibraryForm extends Component {
     state = {
@@ -8,16 +10,9 @@ export default class LibraryForm extends Component {
       gameConsole: ''
     };
 
-    addGame = game => {
-        const newState = {};
-        LibraryManager.post(game)
-        .then(LibraryManager.getAll)
-        .then(games => {
-          console.log('games', games);
-          newState.games = games;
-          this.setState(newState);
-        });
-    }
+
+   
+    
     saveNewGame = evt => {
         evt.preventDefault();
 
@@ -26,8 +21,9 @@ export default class LibraryForm extends Component {
             gameConsole: this.state.gameConsole
         };
 
-        this.addGame(game)
+        this.props.addGame(game)
     };
+    
 
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -49,6 +45,7 @@ export default class LibraryForm extends Component {
                         onChange={this.handleFieldChange}
                         id="gameName"
                         placeholder="Game Title"
+                        
                         />
                     </div>
                     <div className="form-group">

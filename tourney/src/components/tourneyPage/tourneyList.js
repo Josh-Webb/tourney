@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './tourney.css';
+// import './tourney.css';
 import { Link } from 'react-router-dom';
 import TourneyCard from './tourneyCard';
 import TourneyManager from '../../modules/TourneyManager';

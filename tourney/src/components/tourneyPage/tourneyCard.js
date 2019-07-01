@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom'
-import './tourney.css';
+// import './tourney.css';
 class TourneyCard extends Component {
   handleClick = e => {
     console.log('click', e, this.props.tourneys.id);
