@@ -6,6 +6,7 @@ import Radio from '../../modules/RadioButton';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
 import LocationsManager from '../../modules/LocationsManager';
 import Planet from './tourneyRadio'
+import TourneyOption from './tourneyOption'
 
 
 export default class TourneyInvite extends Component {
@@ -91,7 +92,7 @@ export default class TourneyInvite extends Component {
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="date"
-                        placeholder="Date"/>
+                        placeholder="YYYY/MM/DD"/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="venue">Venue</label>
@@ -101,13 +102,13 @@ export default class TourneyInvite extends Component {
                         id="venue"
                         placeholder="Venue" />
                     </div>
-                    
-                    
+
                      <button
                      className="btn btn-primary"
                      onClick={this.saveNewTourney}>
                          Submit
                      </button>
+                     
                      
                 </form>
             </React.Fragment>

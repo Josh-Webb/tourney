@@ -61,6 +61,7 @@ export default class TourneyList extends Component {
               />
           </section>
         <section className="tourneyCard">
+          
           {this.state.tourneys.map(item => {
             return (
               <TourneyCard

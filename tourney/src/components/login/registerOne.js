@@ -82,7 +82,7 @@ export default class RegisterOne extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Email</label>
+                        <label htmlFor="password">Password</label>
                         <input
                             type="password"
                             required
