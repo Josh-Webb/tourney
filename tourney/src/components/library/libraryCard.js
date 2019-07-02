@@ -41,8 +41,6 @@ class LibraryCard extends Component {
         ConnectionManager.getAll()
             .then(connections => {
                 const loopArray1 = [];
-                // console.log("connections", connections)
-                // console.log(connections.length)
                 let arrayLength = connections.length
                 console.log(arrayLength, "arrayLength var")
                 for (let i = 1; i < arrayLength; i++) {
@@ -240,8 +238,8 @@ class LibraryCard extends Component {
                 this.props.games.gameName
             } </h2> <h6> For the {
                 " " + this.props.games.gameConsole
-            } </h6> <
-            button type = "button"
+            } </h6> 
+            {/* <button type = "button"
             className = "btn btn-success"
             onClick = {
                 this.handleClick
@@ -249,8 +247,9 @@ class LibraryCard extends Component {
             disabled = {
                 this.state.saveDisabled
             } >
-            Delete </button> <
-            button type = "button"
+             Delete </button>  */}
+             
+             <button type = "button"
             className = "btn btn-success"
             onClick = {
                 this.handleOtherClick
@@ -258,8 +257,8 @@ class LibraryCard extends Component {
             disabled = {
                 this.state.saveDisabled
             } >
-            Add Game to Games Played </button> <
-            button type = "button"
+            Add Game to Games Played </button> 
+            {/* <button type = "button"
             className = "btn btn-success"
             onClick = {
                 this.handleOtherOtherClick
@@ -267,7 +266,7 @@ class LibraryCard extends Component {
             disabled = {
                 this.state.saveDisabled
             } >
-            Generator Tourney </button> 
+            Generator Tourney </button> */}
             </div>
         )
     }

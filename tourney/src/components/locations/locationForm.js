@@ -59,7 +59,7 @@ export default class LocationForm extends Component {
 
   createCheckbox = option => (
     <Checkbox
-      label={option.charAt(0).toUpperCase()+option.slice(1)}
+      label={option}
       isSelected={this.state.checkboxes[option]}
       onCheckboxChange={this.handleCheckboxChange}
       key={option}
@@ -99,7 +99,7 @@ export default class LocationForm extends Component {
       checkboxes: this.state.checkboxes
     };
 
-    this.addLocation(location).then(() => this.props.history.push('/'));
+    this.addLocation(location).then(() => this.props.history.push('/tourney'));
     console.log(sessionStorage.getItem('credentials'))
   };
 

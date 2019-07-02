@@ -1,13 +1,10 @@
-/* .ApplicationView {
-    display: flex;
-    justify-content: space-around;
-  } */
-
   body {
-    background-color: #765898;
+    /* background-color: #765898; */
+    background-image: url(./thumbnails/arcadeBackground.jpg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: 'Bangers', cursive;
     
   }
 
@@ -19,9 +16,11 @@
      
       display: flex;
       flex-direction: column;
-      
+      background-color: slategray;
+      border: 3px solid black;
+      border-radius: 20px;
       color: black;
-      justify-content: space-between;
+      justify-content: center;
   }
 
   .header {
@@ -31,6 +30,7 @@
     background-color: slategray;
     border-radius: 20px;
     color: black;
+    font-family: 'Bangers', cursive;
   }
 
   .form-group {
@@ -40,6 +40,7 @@
       margin: 5px;
       padding: 3px;
       display: flex;
+      margin-left: 10px;
       justify-content: center;
       flex-direction: column;
       width: 80%;
@@ -67,12 +68,19 @@
     width: 50%;
 }
 
+.libraryCard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .library-card {
     border: 5px solid black;
     padding: 10px;
     margin: 10px;
     background-color: slategray;
     border-radius: 20px;
+    width: 50%;
 
 }
 
@@ -101,14 +109,6 @@
     margin-left: 10%;
 }
 
-.tourneyName {
-    
-}
-
-.tourneyGame {
-  
-}
-
-.tourneyDate {
-
+.registerTwoForms {
+    margin-left: 220px;
 }

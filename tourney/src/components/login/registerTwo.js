@@ -111,6 +111,7 @@ class RegisterTwo extends Component {
   render() {
     return (
       <React.Fragment>
+        <div className="registerTwoForms">
           <div className="form-group">
                         <label htmlFor="address">Address</label>
                         <input type="text"
@@ -131,6 +132,7 @@ class RegisterTwo extends Component {
                         placeholder="In miles"
                         />
                     </div>
+         </div>
 
 
         <div className="container">
