@@ -75,8 +75,8 @@
       "email": "cat@cat.com",
       "password": "password",
       "id": 10,
-      "address": "500 ",
-      "maxDistance": "666",
+      "address": "912 S 14th S Nashville, Tn",
+      "maxDistance": "8 miles",
       "checkboxes": {
         "monday": true,
         "tuesday": true,
@@ -84,8 +84,7 @@
         "thursday": true,
         "friday": true,
         "saturday": true,
-        "sunday": true,
-        "Monday": true
+        "sunday": true
       }
     },
     {
@@ -736,6 +735,45 @@
         "Wednesday": true
       },
       "id": 26
+    },
+    {
+      "address": "500 INterstate BLVd S, Nashville, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": true,
+        "sunday": false
+      },
+      "id": 27
+    },
+    {
+      "address": "500 Interstate Blv S, Nashville, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": true,
+        "sunday": false
+      },
+      "id": 28
+    },
+    {
+      "address": "500 Interstate Blv S Nashville, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": true,
+        "sunday": false
+      },
+      "id": 29
     }
   ],
   "games": [
@@ -743,16 +781,6 @@
       "id": 1,
       "gameName": "Street Fighter V",
       "gameConsole": "PS4"
-    },
-    {
-      "gameName": "Mortal Kombat XI",
-      "gameConsole": "PS4",
-      "id": 4
-    },
-    {
-      "gameName": "Super Smash Bros Ultimate",
-      "gameConsole": "Switch",
-      "id": 5
     }
   ],
   "tourneys": [
@@ -760,15 +788,71 @@
       "id": 1,
       "game": "Street Fighter V",
       "name": "SmashVille",
-      "locationAddress": "500 Interstate Blvd South, Nashville, TN",
+      "locationAddress": "801 Percy Warner Blvd, Nashville, TN",
       "date": "2019-06-27"
     },
     {
       "name": "Lollapalooza",
       "game": "Samurai Shodown",
-      "locationAddress": "500 Interstate Blvd South, Nashville, TN",
+      "locationAddress": "3220 Vailview Dr, Nashville, TN",
       "date": "2019-7-4",
       "id": 2
+    },
+    {
+      "name": "BloodStorm",
+      "game": "Super Smash Bros Melee",
+      "locationAddress": "912 S 14th St, Nashville, TN",
+      "date": "2019/7/3",
+      "id": 3
+    },
+    {
+      "name": "NSS SuperSlam",
+      "game": "Shrek SuperSlam",
+      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
+      "date": "2019/7/1",
+      "id": 4
+    },
+    {
+      "name": "NSS SuperSlam",
+      "game": "Shrek SuperSlam",
+      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
+      "date": "2019/7/1",
+      "id": 5
+    },
+    {
+      "name": "NSS SuperSlam",
+      "game": "Shrek SuperSlam",
+      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
+      "date": "2019/7/1",
+      "id": 6
+    },
+    {
+      "name": "NSS SuperSlam",
+      "game": "Shrek SuperSlam",
+      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
+      "date": "2019/7/1",
+      "id": 7
+    },
+    {
+      "name": "NSS SuperSlam",
+      "game": "Shrek SuperSlam",
+      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
+      "date": "2019/7/1",
+      "id": 8
+    },
+    {
+      "name": "NSS SuperSlam",
+      "game": "Shrek SuperSlam",
+      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
+      "date": "2019/7/1",
+      "id": 9
+    },
+    {
+      "name": "NSS SuperSlam",
+      "game": "Shrek SuperSlam",
+      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
+      "date": "2019/7/1",
+      "id": 10
     }
   ],
   "connections": [
@@ -886,6 +970,21 @@
       "game_id": 4,
       "user_id": 10,
       "id": 25
+    },
+    {
+      "game_id": 6,
+      "user_id": 10,
+      "id": 26
+    },
+    {
+      "game_id": 7,
+      "user_id": 10,
+      "id": 27
+    },
+    {
+      "game_id": 8,
+      "user_id": 10,
+      "id": 28
     }
   ],
   "tips": [

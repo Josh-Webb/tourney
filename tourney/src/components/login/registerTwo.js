@@ -62,7 +62,7 @@ class RegisterTwo extends Component {
 
   createCheckbox = option => (
     <Checkbox
-      label={option.charAt(0).toUpperCase()+option.slice(1)}
+      label={option}
       isSelected={this.state.checkboxes[option]}
       onCheckboxChange={this.handleCheckboxChange}
       key={option}
@@ -105,7 +105,7 @@ class RegisterTwo extends Component {
       checkboxes: this.state.checkboxes
     };
 
-    this.updateUser(users).then(() => this.props.history.push('/'));
+    this.updateUser(users).then(() => this.props.history.push('/tourney'));
   };
 
   render() {

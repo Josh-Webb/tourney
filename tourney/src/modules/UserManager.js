@@ -6,6 +6,10 @@ export default {
       return fetch(`${remoteURL}/users?user_name=${userName}`).then(e => e.json())
   },
 
+  getDayArray(day) {
+      return fetch (`${remoteURL}/users?checkboxes.${day}=true`).then(e => e.json())
+  },
+
   getId(id) {
     return fetch(`${remoteURL}/users/${id}`).then(e => e.json())
 },

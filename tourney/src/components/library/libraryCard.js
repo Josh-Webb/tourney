@@ -17,6 +17,7 @@ import ParsePlayerIds from '../../modules/ParseGameId'
 import './library.css'
 
 
+
 class LibraryCard extends Component {
     state = {
         saveDisabled: false,
@@ -24,6 +25,7 @@ class LibraryCard extends Component {
         validAddresses: [],
         dayToPlay: ''
     };
+
 
     handleClick = e => {
         console.log('click', e, this.props.games.id);
@@ -42,12 +44,9 @@ class LibraryCard extends Component {
             .then(connections => {
                 const loopArray1 = [];
                 let arrayLength = connections.length
-                console.log(arrayLength, "arrayLength var")
                 for (let i = 1; i < arrayLength; i++) {
                     if (gameId === connections[i].game_id) {
-                        console.log([i], connections[i].game_id, '<game_id', connections[i].user_id, '<user_id')
                         loopArray1.push(connections[i].user_id)
-                        console.log(loopArray1, 'playerIdArray')
                     } else {
                         console.log('nope')
                     }
@@ -58,144 +57,152 @@ class LibraryCard extends Component {
                 })
                 return loopArray1
             }).then(arrayarino => {
-                console.log(this.state.playerIds, arrayarino, "arrayarino")
                 this.ParseDayAddresses(arrayarino)
-            }).then(parsedObject => {
-                    console.log(parsedObject, "parsedObject")
-                }
-
-            )
+            })
     }
+
+
+
+
+    ReturnAddress = (obj) => {
+        for (let i = 0; i < obj.length; i++){
+            return obj[i].address
+        }
+    };
+
+    
 
 
     ParseDayAddresses = (array) => {
         // let winnerArray = [];
-        let mondayAddressesArray = [{
-            day: "monday"
-        }];
-        let tuesdayAddressesArray = [{
-            day: "tuesday"
-        }];
-        let wednesdayAddressesArray = [{
-            day: "wednesday"
-        }];
-        let thursdayAddressesArray = [{
-            day: "thursday"
-        }];
-        let fridayAddressesArray = [{
-            day: "friday"
-        }];
-        let saturdayAddressesArray = [{
-            day: "saturday"
-        }];
-        let sundayAddressesArray = [{
-            day: "sunday"
-        }];
-        let allAddressesArray = [mondayAddressesArray, tuesdayAddressesArray, wednesdayAddressesArray, thursdayAddressesArray, fridayAddressesArray, saturdayAddressesArray, sundayAddressesArray]
+        
+        let mondayAddressesArray = UserManager.getDayArray('monday').then(user => this.ReturnAddress(user));
+        console.log("THIS ONE", this.mondayAddressesArray);
+        let tuesdayAddressesArray = UserManager.getDayArray('tuesday');
+        console.log("This other one", tuesdayAddressesArray);
+        let wednesdayAddressesArray = UserManager.getDayArray('wednesday');
+        console.log("Wednesday user array", wednesdayAddressesArray);
+        let thursdayAddressesArray = UserManager.getDayArray('thursday');
+        console.log("Thursday user array", thursdayAddressesArray);
+        let fridayAddressesArray = UserManager.getDayArray('friday');
+        console.log("Friday User Array", fridayAddressesArray);
+        let saturdayAddressesArray = UserManager.getDayArray('saturday');
+        console.log("Saturday User Array", saturdayAddressesArray);
+        let sundayAddressesArray = UserManager.getDayArray('sunday');
+        console.log("Sunday Day Array", sundayAddressesArray);
+        let allAddressesArray = [mondayAddressesArray, tuesdayAddressesArray.PromiseValue, wednesdayAddressesArray, thursdayAddressesArray, fridayAddressesArray, saturdayAddressesArray, sundayAddressesArray]
         let orderedAddressesArray = ((allAddressesArray.sort(function (a, b) {
             return b.length - a.length
         })))
 
+        this.ResolvePromise(orderedAddressesArray);
+        }
 
-        array.forEach(function (element) {
-            console.log(element)
-            UserManager.getId(element)
-                .then(grabedUser => {
-                    console.log(grabedUser.checkboxes.monday)
-                    if (grabedUser.checkboxes.monday === true) {
+        ResolvePromise = (promise) => {
+            console.log("resolve promise",promise);
+        }
 
-                        mondayAddressesArray.push(grabedUser.address);
+        // array.forEach(function (element) {
+        //     console.log(element)
+        //     UserManager.getId(element)
+        //         .then(grabedUser => {
+        //             console.log(grabedUser.checkboxes.monday)
+        //             if (grabedUser.checkboxes.monday === true) {
 
-                    } else {
-                        console.log("false")
-                    };
-                    console.log(grabedUser.checkboxes.tuesday)
-                    if (grabedUser.checkboxes.tuesday === true) {
+        //                 mondayAddressesArray.push(grabedUser.address);
 
-                        tuesdayAddressesArray.push(grabedUser.address)
+        //             } else {
+        //                 console.log("false")
+        //             };
+        //             console.log(grabedUser.checkboxes.tuesday)
+        //             if (grabedUser.checkboxes.tuesday === true) {
 
-                    } else {
-                        console.log("false")
-                    };
-                    console.log(grabedUser.checkboxes.wednesday)
-                    if (grabedUser.checkboxes.wednesday === true) {
+        //                 tuesdayAddressesArray.push(grabedUser.address)
 
-                        wednesdayAddressesArray.push(grabedUser.address)
-                    } else {
-                        console.log("false")
-                    };
-                    console.log(grabedUser.checkboxes.thursday)
-                    if (grabedUser.checkboxes.thursday === true) {
+        //             } else {
+        //                 console.log("false")
+        //             };
+        //             console.log(grabedUser.checkboxes.wednesday)
+        //             if (grabedUser.checkboxes.wednesday === true) {
 
-                        thursdayAddressesArray.push(grabedUser.address)
+        //                 wednesdayAddressesArray.push(grabedUser.address)
+        //             } else {
+        //                 console.log("false")
+        //             };
+        //             console.log(grabedUser.checkboxes.thursday)
+        //             if (grabedUser.checkboxes.thursday === true) {
 
-                    } else {
-                        console.log("false")
-                    };
-                    console.log(grabedUser.checkboxes.friday)
-                    if (grabedUser.checkboxes.friday === true) {
+        //                 thursdayAddressesArray.push(grabedUser.address)
 
-                        fridayAddressesArray.push(grabedUser.address)
+        //             } else {
+        //                 console.log("false")
+        //             };
+        //             console.log(grabedUser.checkboxes.friday)
+        //             if (grabedUser.checkboxes.friday === true) {
 
-                    } else {
-                        console.log("false")
-                    };
-                    console.log(grabedUser.checkboxes.saturday)
-                    if (grabedUser.checkboxes.saturday === true) {
+        //                 fridayAddressesArray.push(grabedUser.address)
 
-                        saturdayAddressesArray.push(grabedUser.address)
+        //             } else {
+        //                 console.log("false")
+        //             };
+        //             console.log(grabedUser.checkboxes.saturday)
+        //             if (grabedUser.checkboxes.saturday === true) {
 
-                    } else {
-                        console.log("false")
-                    };
-                    console.log(grabedUser.checkboxes.sunday)
-                    if (grabedUser.checkboxes.sunday === true) {
-                        sundayAddressesArray.push(grabedUser.address)
+        //                 saturdayAddressesArray.push(grabedUser.address)
 
-                    } else {
-                        console.log("false")
-                    }
-                    console.log(mondayAddressesArray, "addresses array")
-                    console.log(tuesdayAddressesArray, "tuesday addresses")
-                    console.log(wednesdayAddressesArray, "wednesday addresses")
-                    console.log(thursdayAddressesArray, "thursday addresses")
-                    console.log(fridayAddressesArray, "friday addresses array")
-                    console.log(saturdayAddressesArray, "saturday addresses array")
-                    console.log(sundayAddressesArray, "sunday addresses array")
-                    // let allAddressesArray = [mondayAddressesArray, tuesdayAddressesArray, wednesdayAddressesArray, thursdayAddressesArray, fridayAddressesArray,saturdayAddressesArray, sundayAddressesArray]
-                    let orderedAddressesArray = ((allAddressesArray.sort(function (a, b) {
-                        return b.length - a.length
-                    })))
-                    let winnerAddressesArray = orderedAddressesArray[0];
-                    let winnerDay = winnerAddressesArray[0].day;
-                    console.log(winnerAddressesArray, "winner addresses array")
-                    let day = winnerAddressesArray;
-                    console.log("All Addresses Array", allAddressesArray)
-                    console.log((allAddressesArray.sort(function (a, b) {
-                        return b.length - a.length
-                    })), "ordered with length")
-                    console.log("WINNER ADDRESSES", winnerAddressesArray)
-                    console.log("winner day", winnerDay)
+        //             } else {
+        //                 console.log("false")
+        //             };
+        //             console.log(grabedUser.checkboxes.sunday)
+        //             if (grabedUser.checkboxes.sunday === true) {
+        //                 sundayAddressesArray.push(grabedUser.address)
 
-                    console.log(day, 'end of loop')
+        //             } else {
+        //                 console.log("false")
+        //             }
+        //             console.log(mondayAddressesArray, "addresses array")
+        //             console.log(tuesdayAddressesArray, "tuesday addresses")
+        //             console.log(wednesdayAddressesArray, "wednesday addresses")
+        //             console.log(thursdayAddressesArray, "thursday addresses")
+        //             console.log(fridayAddressesArray, "friday addresses array")
+        //             console.log(saturdayAddressesArray, "saturday addresses array")
+        //             console.log(sundayAddressesArray, "sunday addresses array")
+        //             // let allAddressesArray = [mondayAddressesArray, tuesdayAddressesArray, wednesdayAddressesArray, thursdayAddressesArray, fridayAddressesArray,saturdayAddressesArray, sundayAddressesArray]
+        //             let orderedAddressesArray = ((allAddressesArray.sort(function (a, b) {
+        //                 return b.length - a.length
+        //             })))
+        //             let winnerAddressesArray = orderedAddressesArray[0];
+        //             let winnerDay = winnerAddressesArray[0].day;
+        //             console.log(winnerAddressesArray, "winner addresses array")
+        //             let day = winnerAddressesArray;
+        //             console.log("All Addresses Array", allAddressesArray)
+        //             console.log((allAddressesArray.sort(function (a, b) {
+        //                 return b.length - a.length
+        //             })), "ordered with length")
+        //             console.log("WINNER ADDRESSES", winnerAddressesArray)
+        //             console.log("winner day", winnerDay)
+
+        //             console.log(day, 'end of loop')
 
 
 
-                    const parsedObj = {
-                        validAddresses: winnerAddressesArray.shift(),
-                        dayToPlay: winnerDay
-                    }
+        //             const parsedObj = {
+        //                 validAddresses: winnerAddressesArray.shift(),
+        //                 dayToPlay: winnerDay
+        //             }
 
-                    return parsedObj;
+        //             return parsedObj;
 
-                })
+        //         })
 
 
             // console.log(parsedObj, "parsedObj")
 
-        })
+        
+        
+    
 
-    }
+    
 
 
 
@@ -239,7 +246,7 @@ class LibraryCard extends Component {
             } </h2> <h6> For the {
                 " " + this.props.games.gameConsole
             } </h6> 
-            {/* <button type = "button"
+            <button type = "button"
             className = "btn btn-success"
             onClick = {
                 this.handleClick
@@ -247,7 +254,7 @@ class LibraryCard extends Component {
             disabled = {
                 this.state.saveDisabled
             } >
-             Delete </button>  */}
+             Delete </button> 
              
              <button type = "button"
             className = "btn btn-success"
@@ -258,7 +265,7 @@ class LibraryCard extends Component {
                 this.state.saveDisabled
             } >
             Add Game to Games Played </button> 
-            {/* <button type = "button"
+            <button type = "button"
             className = "btn btn-success"
             onClick = {
                 this.handleOtherOtherClick
@@ -266,10 +273,11 @@ class LibraryCard extends Component {
             disabled = {
                 this.state.saveDisabled
             } >
-            Generator Tourney </button> */}
+            Generator Tourney </button>
             </div>
         )
     }
+
 
 
 }
