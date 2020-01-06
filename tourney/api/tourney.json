@@ -75,16 +75,16 @@
       "email": "cat@cat.com",
       "password": "password",
       "id": 10,
-      "address": "912 S 14th S Nashville, Tn",
-      "maxDistance": "8 miles",
+      "address": "901 Sevier Nasvhille, TN",
+      "maxDistance": "4",
       "checkboxes": {
         "monday": true,
-        "tuesday": true,
-        "wednesday": true,
+        "tuesday": false,
+        "wednesday": false,
         "thursday": true,
-        "friday": true,
+        "friday": false,
         "saturday": true,
-        "sunday": true
+        "sunday": false
       }
     },
     {
@@ -774,6 +774,19 @@
         "sunday": false
       },
       "id": 29
+    },
+    {
+      "address": "301 Plus Park BLVD, NASHVILLE, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 30
     }
   ],
   "games": [
@@ -985,6 +998,31 @@
       "game_id": 8,
       "user_id": 10,
       "id": 28
+    },
+    {
+      "game_id": 1,
+      "user_id": 10,
+      "id": 29
+    },
+    {
+      "game_id": 1,
+      "user_id": 10,
+      "id": 30
+    },
+    {
+      "game_id": 2,
+      "user_id": 10,
+      "id": 31
+    },
+    {
+      "game_id": 1,
+      "user_id": 10,
+      "id": 32
+    },
+    {
+      "game_id": 2,
+      "user_id": 10,
+      "id": 33
     }
   ],
   "tips": [

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import TourneyCard from './tourneyCard';
 import TourneyManager from '../../modules/TourneyManager';
 import TourneyInvite from './tourneyInvite';
+import LocationDropdown from './TourneyDropDown';
 import LocationsManager from '../../modules/LocationsManager';
 
 export default class TourneyList extends Component {
