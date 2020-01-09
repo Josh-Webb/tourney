@@ -2,7 +2,7 @@
 <p>Tourney was my Front End Capstone after my first 3 months programming at the Nashville Software School.  It is a React.js application using a local JSON Server, Bootstrap, JavaScript, Node, NPM and a lot of elbow grease.</p>
 https://www.youtube.com/embed/SOESfYkISAs
 <br />
-<img src="tourney/src/components/thumbnails/Screenshot (38).png">
+<img src="tourney/tourney/src/components/thumbnails/Screenshot (38).png">
 <p>After registering and logging in the user will can navigate to the Library page where you can add different games you want to add to Tourney's Database.  The games are grouped by the consoles they are played on.</p>
 <img>
 <p>The user can then navigate to the Venue page where they can enter an address to a potential venue for the tournament.<p>
