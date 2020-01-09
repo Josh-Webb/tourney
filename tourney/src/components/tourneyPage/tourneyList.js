@@ -21,7 +21,7 @@ export default class TourneyList extends Component {
     });
   }
 
-  deleteTourney = (id) => {
+  deleteTourney = id => {
     const newState = {};
     TourneyManager.deleteTourney(id)
       .then(TourneyManager.getAll)
@@ -57,6 +57,7 @@ export default class TourneyList extends Component {
                 key={item.id}
                 tourneys={item}
                 {...this.props}
+                deleteTourney={this.deleteTourney}
               />
             );
           })}

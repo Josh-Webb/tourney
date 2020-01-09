@@ -35,9 +35,7 @@ export default class TourneyInvite extends Component {
     
     saveNewTourney = evt => {
         evt.preventDefault();
-        if (this.state.name === "" || this.state.game === "" || this.state.date === "") {
-            window.alert("Please input a name, a game, a location and a date.")
-        } else {
+      
         const tourney = {
             name: this.state.name,
             game: this.state.game,
@@ -46,7 +44,7 @@ export default class TourneyInvite extends Component {
         };
 
         this.props.addTourney(tourney)
-    }};
+    };
 
     render() {
         return(
@@ -68,12 +66,12 @@ export default class TourneyInvite extends Component {
                         <select
                         name="game"
                         onChange={this.handleFieldChange}
-                        id="venue"
+                        id="game"
                         value={this.game}
                         className="form-control"
                         >
                             <option key="gameselect">Select a Game</option>
-                            {this.state.games.map(game => <option key={game.id} value = {game.gameName}>{game.gameConsole}  ---  {game.gameName}</option>)}
+                            {this.state.games.map(game => <option key={game.id} value={game.gameName}>{game.gameConsole} --- {game.gameName}</option>)}
                         </select>
                     </div>
                     <div>

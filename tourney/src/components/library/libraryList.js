@@ -10,9 +10,7 @@ import ConnectionManager from '../../modules/ConnectionManager'
 export default class LibraryList extends Component {
   state = {
     games: [],
-    users: [],
-    addressArray: [],
-    
+    users: []
   };
 
 
@@ -26,7 +24,7 @@ export default class LibraryList extends Component {
         newState.games = games;
         this.setState(newState);
       });
-  };
+  }
 
   addGame = (game) => {
     const newNewState = {};

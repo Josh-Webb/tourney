@@ -1,3 +1,12 @@
 body {
     background-color: black;
 }
+
+#locationPage {
+    margin: auto;
+    width: 75%;
+}
+
+#buttonGroup {
+    margin: auto;
+}

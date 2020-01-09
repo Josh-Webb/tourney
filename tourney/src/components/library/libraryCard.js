@@ -1,11 +1,6 @@
 
-import React, {
-    Component
-} from 'react';
-import {
-    withRouter
-} from 'react-router-dom'
-// import './library.css';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom'
 import collectSessStorage from '../../modules/UpdateProfileButton'
 import ConnectionManager from '../../modules/ConnectionManager'
 import UserManager from '../../modules/UserManager'
@@ -34,13 +29,6 @@ class LibraryCard extends Component {
 
 
 
-    ReturnAddress = (obj) => {
-        for (let i = 0; i < obj.length; i++){
-            return obj[i].address
-        }
-    };
-
-
     addToPlayedButton = e => {
         console.log('click', e, this.props.games.id);
         this.setState({
@@ -58,9 +46,12 @@ class LibraryCard extends Component {
         return ( <div className = "library-card" >
             <h2 > {
                 this.props.games.gameName
-            } </h2> <h6> For the {
+            } </h2> 
+            
+            <h4> For the {
                 " " + this.props.games.gameConsole
-            } </h6> 
+            } </h4> 
+            
             <button type = "button"
             className = "btn btn-success"
             onClick = {
