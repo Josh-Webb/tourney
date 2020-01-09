@@ -17,4 +17,4 @@ https://www.youtube.com/embed/SOESfYkISAs
 <p>To run Tourney on your own system you will first need to clone down my repo.  From their you will need to navigate to the api folder and run 'json-server -p 6001 -w tourney.json '.</p>
 <p>In a seperate terminal run npm start from the main director of Tourney.  From there you should be good to go.</p>
 
-<img src="\tourney\tourney\tourney\src\components\thumbnails\Screenshot (38).png">
+<img src="tourney\tourney\tourney\src\components\thumbnails\Screenshot (38).png">
