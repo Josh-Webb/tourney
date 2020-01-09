@@ -19,6 +19,8 @@
 <p>*In the future users will be able to sign up for a tournament and be automatically sorted into a bracket.*</p>
 <br/>
 <p>To run Tourney on your own system you will first need to clone down my repo.  From their you will need to navigate to the api folder and run 'json-server -p 6001 -w tourney.json '.</p>
-<p>In a seperate terminal run npm start from the main director of Tourney.  From there you should be good to go.</p>
+<p>In a separate terminal run npm install and then npm start from the main director of Tourney.  From there you should be good to go.</p>
+
+
 
 
