@@ -16,6 +16,12 @@
         "saturday": true,
         "sunday": false
       }
+    },
+    {
+      "user_name": "Josh Webb",
+      "email": "joshwebb42@gmail.com",
+      "password": "Wisard42*",
+      "id": 2
     }
   ],
   "locations": [
@@ -213,6 +219,45 @@
         "sunday": false
       },
       "id": 15
+    },
+    {
+      "address": "501 Broadway Ave Nashville, TN",
+      "checkboxes": {
+        "monday": true,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": true,
+        "saturday": false,
+        "sunday": false
+      },
+      "id": 16
+    },
+    {
+      "address": "501 Broadway Ave Nashville, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": true,
+        "sunday": false
+      },
+      "id": 17
+    },
+    {
+      "address": "123 East Nasvhille, TN",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": true,
+        "sunday": false
+      },
+      "id": 18
     }
   ],
   "games": [
@@ -240,15 +285,32 @@
       "gameName": "Killer Instinct",
       "gameConsole": "XBOX ONe",
       "id": 6
+    },
+    {
+      "gameName": "SOul Calibur 2",
+      "gameConsole": "Gamecube",
+      "id": 7
+    },
+    {
+      "gameName": "Capcom Vs SNK 2",
+      "gameConsole": "DreamCAST",
+      "id": 8
     }
   ],
   "tourneys": [
     {
-      "id": 1,
+      "name": "Lollapalooza",
+      "game": "Killer Instinct",
+      "locationAddress": "501 Broadway Ave Nashville, TN",
+      "date": "2020-01-31",
+      "id": 1
+    },
+    {
+      "name": "Red Bull Kumite",
       "game": "Street Fighter V",
-      "name": "SmashVille",
-      "locationAddress": "801 Percy Warner Blvd, Nashville, TN",
-      "date": "2019-06-27"
+      "locationAddress": "700 Woodland St, Nashville, TN",
+      "date": "2020-01-17",
+      "id": 2
     }
   ],
   "connections": [
