@@ -3,7 +3,7 @@
 
 <br />
 <div>
-<img src="tourney/tourney/src/components/thumbnails/Screenshot (38).png">
+<img src="src/components/thumbnails/Screenshot (38).png">
   </div>
 <p>After registering and logging in the user will can navigate to the Library page where you can add different games you want to add to Tourney's Database.  The games are grouped by the consoles they are played on.</p>
 
@@ -20,3 +20,4 @@
 <p>In a seperate terminal run npm start from the main director of Tourney.  From there you should be good to go.</p>
 
 <img src="tourney\src\components\thumbnails\Screenshot (38).png">
+src/components/thumbnails/Screenshot (38).png
