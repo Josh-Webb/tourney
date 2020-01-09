@@ -1,1 +1,0 @@
-//Flavor text tips.

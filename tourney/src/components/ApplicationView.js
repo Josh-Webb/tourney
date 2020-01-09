@@ -23,7 +23,6 @@ class ApplicationView extends Component {
     state = {
         bracket: [],
         library: [],
-        locations: [],
         tourneyPage: [],
         login: [],
         register: [],

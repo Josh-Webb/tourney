@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import LocationsManager from '../../modules/LocationsManager';
 import { Media, Button, Form, FormGroup, Label, Input, FormText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-// import './locations.css';
+import './locations.css';
 import Checkbox from "../../modules/Checkboxes";
 
 const OPTIONS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
@@ -108,7 +108,7 @@ export default class LocationForm extends Component {
       <React.Fragment>
 
 
-        <div className="container">
+        <form id="locationPage">
           <div className="form-group">
                         <label htmlFor="address">What's the Address of the Venue?</label>
                         <input type="text"
@@ -119,13 +119,14 @@ export default class LocationForm extends Component {
                         placeholder="Address"
                         />
                     </div>
-              <div className="form-group">What Day or Days is this Venue Available</div>
-        <div className="row mt-5">
+              <div className="form-group" id="afterAddress">
+                <label for="whatDays">What Day or Days is this Venue Available?</label>
+        
           <div className="col-sm-12">
             <form onSubmit={this.handleFormSubmit}>
             {this.createCheckboxes()}
 
-              <div className="form-group mt-2">
+              <div className="form-group mt-2" id="buttonGroup">
                 <button
                   type="button"
                   className="btn"
@@ -147,8 +148,9 @@ export default class LocationForm extends Component {
               </div>
             </form>
           </div>
+        
         </div>
-      </div>
+      </form>
       </React.Fragment>
     );
   }

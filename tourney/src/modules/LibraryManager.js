@@ -1,11 +1,11 @@
-const remoteURL = "http://localhost:5001"
+const remoteURL = "http://localhost:6001"
 
 export default {
   get(id) {
     return fetch(`${remoteURL}/games/${id}`).then(e => e.json())
   },
   getAll() {
-    return fetch(`${remoteURL}/games?_sort=id&_order=desc`).then(e => e.json())
+    return fetch(`${remoteURL}/games?_sort=gameConsole&_order=asc`).then(e => e.json())
   },
   deleteGame(id) {
     return fetch(`${remoteURL}/games/${id}`, {

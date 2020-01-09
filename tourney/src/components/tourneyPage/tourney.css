@@ -1,4 +1,11 @@
-body {
-    background-color: palevioletred;
-    border: 1px solid blue;
+#tourneyWidth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+#tourneyCard {
+    width: 50%;
 }
