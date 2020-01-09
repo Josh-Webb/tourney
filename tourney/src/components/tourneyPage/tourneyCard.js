@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom'
 // import './tourney.css';
 class TourneyCard extends Component {
+  state = {
+    saveDisabled: false
+  };
+
+
   handleClick = e => {
     console.log('click', e, this.props.tourneys.id);
     this.setState({
@@ -20,9 +25,9 @@ class TourneyCard extends Component {
         <h5 className="tourneyAddress">{this.props.tourneys.locationAddress}</h5>
         
         
-        {/* <button onClick={this.handleClick} disabled={this.state.saveDisabled}>
+         <button onClick={this.handleClick} disabled = {this.state.saveDisabled}>
           Delete
-        </button> */}
+        </button> 
         
       </div>
     );

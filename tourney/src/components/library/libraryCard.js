@@ -21,7 +21,7 @@ class LibraryCard extends Component {
     };
 
 
-    handleClick = e => {
+    deleteButton = e => {
         console.log('click', e, this.props.games.id);
         this.setState({
             saveDisabled: true
@@ -41,7 +41,7 @@ class LibraryCard extends Component {
     };
 
 
-    handleOtherClick = e => {
+    addToPlayedButton = e => {
         console.log('click', e, this.props.games.id);
         this.setState({
             saveDisabled: true
@@ -54,19 +54,6 @@ class LibraryCard extends Component {
         this.addConnection(connectionInfo);
     }
 
-    handleOtherOtherClick = e => {
-        console.log('click', e, this.props.games.id)
-        //   let gid = this.props.games.id;
-        this.setState({
-            saveDisabled: true
-        });
-
-        this.generateTournament(this.props.games.id);
-
-        console.log(this.props.games.id, "Game Id")
-        console.log()
-    }
-
     render() {
         return ( <div className = "library-card" >
             <h2 > {
@@ -77,7 +64,7 @@ class LibraryCard extends Component {
             <button type = "button"
             className = "btn btn-success"
             onClick = {
-                this.handleClick
+                this.deleteButton
             }
             disabled = {
                 this.state.saveDisabled
@@ -87,21 +74,12 @@ class LibraryCard extends Component {
              <button type = "button"
             className = "btn btn-success"
             onClick = {
-                this.handleOtherClick
+                this.addToPlayedButton
             }
             disabled = {
                 this.state.saveDisabled
             } >
             Add Game to Games Played </button> 
-            <button type = "button"
-            className = "btn btn-success"
-            onClick = {
-                this.handleOtherOtherClick
-            }
-            disabled = {
-                this.state.saveDisabled
-            } >
-            Generator Tourney </button>
             </div>
         )
     }

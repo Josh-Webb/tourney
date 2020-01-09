@@ -1,1 +1,0 @@
-//home for news cards and tips card

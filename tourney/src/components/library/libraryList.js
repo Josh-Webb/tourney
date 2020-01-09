@@ -38,26 +38,7 @@ export default class LibraryList extends Component {
       this.setState(newNewState);
     });
 }
-// componentDidMount() {
 
-//     LibraryManager.getAll().then(allGames => {
-//         console.log(allGames);
-//         const storedData = sessionStorage.getItem('credentials');
-//         const storedObject = JSON.parse(storedData);
-//         const connection = ConnectionManager.getAll().then(allConnections => {
-//                 return allConnections
-//             });
-//         const connectionsObj = JSON.parse(connection);
-//         const userGames = allGames.filter(games => {
-//             return connectionsObj.game_id === games.id
-//         })
-//         console.log(storedObject, userGames)
-//         this.setState({
-//             games: userGames
-//         })
-//     })
-      
-//   }
 
   componentDidMount() {
     const newState = {};

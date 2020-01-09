@@ -793,6 +793,19 @@
         "sunday": false
       },
       "id": 30
+    },
+    {
+      "address": "",
+      "checkboxes": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false,
+        "sunday": true
+      },
+      "id": 31
     }
   ],
   "games": [
@@ -800,6 +813,11 @@
       "id": 1,
       "gameName": "Street Fighter V",
       "gameConsole": "PS4"
+    },
+    {
+      "gameName": "Xenoblade Fighters",
+      "gameConsole": "Switch",
+      "id": 3
     }
   ],
   "tourneys": [
@@ -813,83 +831,9 @@
     {
       "name": "Lollapalooza",
       "game": "Samurai Shodown",
-      "locationAddress": "3220 Vailview Dr, Nashville, TN",
-      "date": "2019-7-4",
+      "locationAddress": "Place",
+      "date": "2020-01-10",
       "id": 2
-    },
-    {
-      "name": "BloodStorm",
-      "game": "Super Smash Bros Melee",
-      "locationAddress": "912 S 14th St, Nashville, TN",
-      "date": "2019/7/3",
-      "id": 3
-    },
-    {
-      "name": "NSS SuperSlam",
-      "game": "Shrek SuperSlam",
-      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
-      "date": "2019/7/1",
-      "id": 4
-    },
-    {
-      "name": "NSS SuperSlam",
-      "game": "Shrek SuperSlam",
-      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
-      "date": "2019/7/1",
-      "id": 5
-    },
-    {
-      "name": "NSS SuperSlam",
-      "game": "Shrek SuperSlam",
-      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
-      "date": "2019/7/1",
-      "id": 6
-    },
-    {
-      "name": "NSS SuperSlam",
-      "game": "Shrek SuperSlam",
-      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
-      "date": "2019/7/1",
-      "id": 7
-    },
-    {
-      "name": "NSS SuperSlam",
-      "game": "Shrek SuperSlam",
-      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
-      "date": "2019/7/1",
-      "id": 8
-    },
-    {
-      "name": "NSS SuperSlam",
-      "game": "Shrek SuperSlam",
-      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
-      "date": "2019/7/1",
-      "id": 9
-    },
-    {
-      "name": "NSS SuperSlam",
-      "game": "Shrek SuperSlam",
-      "locationAddress": "500 Lnterstate Blv S Nashville, TN",
-      "date": "2019/7/1",
-      "id": 10
-    },
-    {
-      "name": "",
-      "game": "",
-      "date": "",
-      "id": 11
-    },
-    {
-      "name": "",
-      "game": "",
-      "date": "",
-      "id": 12
-    },
-    {
-      "name": "",
-      "game": "",
-      "date": "",
-      "id": 13
     }
   ],
   "connections": [
