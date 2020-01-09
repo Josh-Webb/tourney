@@ -392,6 +392,12 @@
         "saturday": true,
         "sunday": false
       }
+    },
+    {
+      "user_name": "My Brother",
+      "email": "mybrother@gmail.com",
+      "password": "Wisard42*",
+      "id": 30
     }
   ],
   "locations": [
@@ -866,6 +872,24 @@
       "locationAddress": "500 Lnterstate Blv S Nashville, TN",
       "date": "2019/7/1",
       "id": 10
+    },
+    {
+      "name": "",
+      "game": "",
+      "date": "",
+      "id": 11
+    },
+    {
+      "name": "",
+      "game": "",
+      "date": "",
+      "id": 12
+    },
+    {
+      "name": "",
+      "game": "",
+      "date": "",
+      "id": 13
     }
   ],
   "connections": [

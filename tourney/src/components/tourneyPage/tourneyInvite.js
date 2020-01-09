@@ -6,7 +6,6 @@ import Radio from '../../modules/RadioButton';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
 import LocationsManager from '../../modules/LocationsManager';
 import Planet from './tourneyRadio'
-import TourneyOption from './tourneyOption'
 
 
 export default class TourneyInvite extends Component {
@@ -35,27 +34,6 @@ export default class TourneyInvite extends Component {
         this.props.addTourney(tourney)
     };
 
-    randomMonday = e => {
-        console.log('click', e, this.props.monday);
-        var rand = this.props.monday[Math.floor(Math.random() * this.props.monday)]
-        console.log(rand, 'rand')
-        }
-
-        
-
-    
-
-    
-    
-
-    handleFieldChange = evt => {
-        const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value;
-        this.setState(stateToChange);
-    };
-
-    
-    
     render() {
         return(
             <React.Fragment>
@@ -83,12 +61,9 @@ export default class TourneyInvite extends Component {
                     </div>
                     <div>
                     </div>
-                    {/* <div>
-                    {this.buildOption('monday')}
-                    </div> */}
                     <div className="form-group">
                         <label htmlFor="date">Date</label> 
-                        <input type="text"
+                        <input type="date"
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="date"
