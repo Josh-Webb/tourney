@@ -36,14 +36,14 @@ class Header extends React.Component {
           <NavbarBrand><h1>Tourney</h1></NavbarBrand>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link type="button" to="/library" className="btn">Library</Link>
+                <Link type="button" className="btn btn-success" to="/library">Library</Link>
                 
               </NavItem>
               <NavItem>
-                <Link type="button" to="/locations" className="btn">Venues</Link>
+                <Link type="button" className="btn btn-success" to="/locations">Venues</Link>
               </NavItem>
               <NavItem>
-                <Link type="button" to="/tourney" className="btn">Tournaments</Link>
+                <Link type="button" className="btn btn-success" to="/tourney">Tournaments</Link>
               </NavItem>
               <NavItem>
               <div

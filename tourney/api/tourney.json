@@ -22,6 +22,12 @@
       "email": "joshwebb42@gmail.com",
       "password": "Wisard42*",
       "id": 2
+    },
+    {
+      "user_name": "bb",
+      "email": "cat@cat.com",
+      "password": "password",
+      "id": 3
     }
   ],
   "locations": [
